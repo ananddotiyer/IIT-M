@@ -1,6 +1,6 @@
 import yaml
 
-f = open(r'D:\Official\GitHub\IITM_Journey\files\335982.yaml')
+f = open(r'files\335982.yaml')
 
 match = dict(yaml.load(f))
 
@@ -85,7 +85,7 @@ f.close()
 
 import csv
 
-with open(r'D:\Official\GitHub\IITM_Journey\files\matches.csv', 'w', newline='') as csvfile:
+with open(r'files\matches.csv', 'w', newline='') as csvfile:
     fieldnames = output_data[0].keys()
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
