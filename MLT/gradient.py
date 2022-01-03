@@ -38,8 +38,8 @@ def gradient_descent(epochs):
 #main program
 w0 = 3 #weight0
 w1 = 4 #weight1
-lr = 0.001 #learning rate
-epochs = 100
+lr = 0.0001 #learning rate
+epochs = 10000
 
 X = 10 * np.random.random(100, ) #Generate 100 examples.
 y = w0 + w1 * X #Generate the outputs based on pre-determined weight vector [3,4]
