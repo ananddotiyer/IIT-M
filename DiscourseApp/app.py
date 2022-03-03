@@ -1,5 +1,6 @@
 # This app has been deployed using GitHub streamlit at
 # https://share.streamlit.io/ananddotiyer/iit-m/main/DiscourseApp/app.py
+# Access it locally at http://localhost:8501
 
 import streamlit as st
 import pandas as pd
@@ -40,7 +41,7 @@ def get_topics():
         idx += 1
         try:
             params = (
-                ('q', '#courses:mlt-kb'),
+                ('q', '#courses:tds-kb'),
                 ('page', str(idx)),
             )
 
