@@ -1,5 +1,6 @@
 # This app has been deployed using GitHub streamlit at
 # https://share.streamlit.io/ananddotiyer/iit-m/main/DiscourseApp/app.py
+# To run it locally, run the command "streamlit run app.py"
 # Access it locally at http://localhost:8501
 
 import streamlit as st
@@ -14,7 +15,7 @@ import json
 
 # st.table(df)
 
-def get_topics():
+def get_topics(course):
     headers = {
         'authority': 'discourse.onlinedegree.iitm.ac.in',
         'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
@@ -41,7 +42,7 @@ def get_topics():
         idx += 1
         try:
             params = (
-                ('q', '#courses:tds-kb'),
+                ('q', f'#courses:{course}-kb'),
                 ('page', str(idx)),
             )
 
@@ -60,9 +61,9 @@ def get_topics():
             pass
     return all_topics
 
-def get_topic_urls():
+def get_topic_urls(course):
     tags_list = []
-    all_topics = get_topics()
+    all_topics = get_topics(course)
     topic_urls = {'URL': [], 'Tags': []}
 
     for topic in all_topics:
@@ -74,14 +75,17 @@ def get_topic_urls():
 def make_clickable(link):
     return f'<a target="_blank" href="{link}">{link}</a>'
 
-def discourse_data():
-    urls = get_topic_urls()
+def discourse_data(course):
+    urls = get_topic_urls(course)
     topic_urls = pd.DataFrame(urls, index=range(1,len(urls['URL']) + 1))
     topic_urls['URL'] = topic_urls['URL'].apply(make_clickable)
     return topic_urls.to_html(escape=False)
     
 #main program
 
-data = discourse_data()
-print(data)
-st.write(data, unsafe_allow_html=True)
+options = ['mlt', 'tds', 'mlf', 'bdm']
+course = st.selectbox("Select course slug:", options)
+if st.button("OK"):
+    data = discourse_data(course)
+    print(data)
+    st.write(data, unsafe_allow_html=True)
