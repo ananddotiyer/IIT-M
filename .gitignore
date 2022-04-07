@@ -130,3 +130,5 @@ dmypy.json
 *.xlsx
 MLT/Untitled.ipynb
 DiscourseApp/app_modified.py
+TDS/data.pickle
+*.pickle
