@@ -3,7 +3,6 @@
 # To run it locally, run the command "streamlit run app.py"
 # Access it locally at http://localhost:8501
 
-from tkinter import E, font
 import streamlit as st
 import pandas as pd
 import numpy as np
