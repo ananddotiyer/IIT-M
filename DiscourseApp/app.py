@@ -76,7 +76,7 @@ def get_topics_from_url(url, activities=False):
             print(e)
     return all_topics
 
-def get_topic_urls(course=None, search_what=None, user=None):
+def get_topic_urls(course=None, search_what=None, user=None, url=None):
     all_topics = []
     from_url = True #Latest, Bookmarks, Top, My Posts, URL, User
     if course:
@@ -92,8 +92,6 @@ def get_topic_urls(course=None, search_what=None, user=None):
         url = "https://discourse.onlinedegree.iitm.ac.in/top"
     elif search_what == 'My posts':
         url = "https://discourse.onlinedegree.iitm.ac.in/posted"
-    else:
-        url = st.text_input("Enter the URL:")
     
     if from_url:
         print(url)
@@ -110,8 +108,8 @@ def get_topic_urls(course=None, search_what=None, user=None):
 def make_clickable(link):
     return f'<a target="_blank" href="{link}">{link}</a>'
 
-def discourse_data(course=None, search_what=None, user=None):
-    urls = get_topic_urls(course=course, search_what=search_what, user=user)
+def discourse_data(course=None, search_what=None, user=None, url=None):
+    urls = get_topic_urls(course=course, search_what=search_what, user=user, url=url)
     topic_urls = pd.DataFrame(urls, index=range(1,len(urls['URL']) + 1))
     if search_activites:
         # Eg.https://discourse.onlinedegree.iitm.ac.in/user_actions.json?offset=0&username=karthik_pod
@@ -123,14 +121,20 @@ def discourse_data(course=None, search_what=None, user=None):
     else:
         topic_urls.drop_duplicates(subset=['URL'], inplace=True) # can't drop the second column, which is a list.
     topic_urls['URL'] = topic_urls['URL'].apply(make_clickable)
-    return topic_urls.to_html(escape=False, col_space='75px')
+    return topic_urls.to_html(escape=False, col_space='100px')
     
 #main program
 course = None
 url = None
 user = None
 search_what = st.radio("Search", ["Course", "Latest", "Bookmarks","Top", "My posts", "User", "URL"])
-search_activites = st.checkbox("Search activites") # Search into activities.  This has a separate json format.
+# Search into activities is not allowed unless, it's through URL
+# Note that activities has a separate json format, and hence handled separately.
+if search_what != 'URL':
+    search_activites = st.checkbox("Search activites", disabled=True)
+else:
+    search_activites = st.checkbox("Search activites")
+
 if search_what == "Course":
     options = ['mlt', 'tds', 'mlf', 'bdm']
     course = st.selectbox("Select course slug:", options)
@@ -139,8 +143,11 @@ if search_what == "Course":
         # print(data)
         st.write(data, unsafe_allow_html=True)
 else:
+    if search_what == "URL":
+        url = st.text_input("Enter the URL:", placeholder=
+            "https://discourse.onlinedegree.iitm.ac.in/user_actions.json?offset=0&username=karthik_pod") 
     if search_what == "User":
         user = st.text_input("Which user?")
     if st.button(f"Search {search_what}"):
-        data = discourse_data(course=course, search_what=search_what, user=user)
+        data = discourse_data(course=course, search_what=search_what, user=user, url=url)
         st.write(data, unsafe_allow_html=True)
