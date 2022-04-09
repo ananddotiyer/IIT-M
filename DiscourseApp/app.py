@@ -51,7 +51,7 @@ def get_topics(course):
             response = requests.get('https://discourse.onlinedegree.iitm.ac.in/search', headers=headers, params=params)
             response = json.loads(response.content)
             
-            old_topics = topics
+            old_topics = topics.copy()
             topics = [(topic['slug'], topic['id'], topic['tags']) for topic in response['topics']]
             if old_topics == topics:
                 break
