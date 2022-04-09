@@ -37,11 +37,9 @@ headers = {
 }
 
 def get_topics(course):
-    idx = -1
     topics = []
     all_topics = []
-    while True:
-        idx += 1
+    for idx in range(0,25):  # first 25 pages
         try:
             params = (
                 ('q', f'#courses:{course}-kb'),
@@ -51,22 +49,16 @@ def get_topics(course):
             response = requests.get('https://discourse.onlinedegree.iitm.ac.in/search', headers=headers, params=params)
             response = json.loads(response.content)
             
-            old_topics = topics.copy()
             topics = [(topic['slug'], topic['id'], topic['tags']) for topic in response['topics']]
-            if old_topics == topics:
-                break
-            else:
-                all_topics.extend(topics)
+            all_topics.extend(topics)
         except:
             pass
     return all_topics
 
 def get_topics_from_url(url, activities=False):
-    idx = -1
     topics = []
     all_topics = []
-    while idx < 25: # first 10 pages
-        idx += 1
+    for idx in range(0, 25): # first 25 pages
         try:
             params = (('page', str(idx)),)
             if not activities:
@@ -83,18 +75,6 @@ def get_topics_from_url(url, activities=False):
         except Exception as e:
             print(e)
     return all_topics
-
-# def get_topics_from_user(user):
-#     topics = []
-#     all_topics = []
-
-#     url = f"https://discourse.onlinedegree.iitm.ac.in/topics/created-by/{user}.json"
-#     print(url)
-#     response = requests.get(url, headers=headers)
-#     response = json.loads(response.content)['topic_list']
-#     topics = [(topic['slug'], topic['id'], topic['tags']) for topic in response['topics']]
-#     all_topics.extend(topics)
-#     return all_topics
 
 def get_topic_urls(course=None, search_what=None, user=None):
     all_topics = []
