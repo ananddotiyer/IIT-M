@@ -16,6 +16,7 @@ import json
 # st.table(df)
 
 def get_topics(course):
+    # In order to construct this header, follow https://stackoverflow.com/a/61140905/2021272
     headers = {
         'authority': 'discourse.onlinedegree.iitm.ac.in',
         'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
