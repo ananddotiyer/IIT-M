@@ -86,6 +86,8 @@ def get_topic_urls(course=None, search_what=None, user=None, url=None):
         url = f"https://discourse.onlinedegree.iitm.ac.in/topics/created-by/{user}.json"
     elif search_what == 'Latest':
         url = "https://discourse.onlinedegree.iitm.ac.in/latest"
+    elif search_what == 'New':
+        url = "https://discourse.onlinedegree.iitm.ac.in/new"
     elif search_what == 'Bookmarks':
         url = "https://discourse.onlinedegree.iitm.ac.in/bookmarks"
     elif search_what == 'Top':
@@ -127,7 +129,8 @@ def discourse_data(course=None, search_what=None, user=None, url=None):
 course = None
 url = None
 user = None
-search_what = st.radio("Search", ["Course", "Latest", "Bookmarks","Top", "My posts", "User", "URL"])
+st.markdown('### Search [Discourse Forums](https://discourse.onlinedegree.iitm.ac.in/) :')
+search_what = st.radio("", ["Course", "Latest", "New", "Bookmarks","Top", "My posts", "User", "URL"])
 # Search into activities is not allowed unless, it's through URL
 # Note that activities has a separate json format, and hence handled separately.
 if search_what != 'URL':
