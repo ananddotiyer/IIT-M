@@ -9,6 +9,8 @@
   - **X** : Mapping or iterable over Mappings
   - **y** : (ignored)
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **self** : object
   - **Xa** : {array, sparse matrix}
@@ -23,25 +25,6 @@
   - **restrict(support[, indices])** : Restrict the features to those in support using feature selection.
   - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform feature->value dicts to array or sparse matrix.
-
-
-## [*FeatureHasher*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
-  class sklearn.feature_extraction.FeatureHasher(n_features=1048576, *, input_type='dict', dtype=<class 'numpy.float64'>, alternate_sign=True)[source]¶
-
-  #### *List of parameters:*
-  - **n_features** : int, default=2**20
-  - **input_type** : str, default=’dict’
-  - **dtype** : numpy dtype, default=np.float64
-  - **alternate_sign** : bool, default=True
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **fit([X, y])** : No-op.
-  - **fit_transform(X[, y])** : Fit to data, then transform it.
-  - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(\*\*params)** : Set the parameters of this estimator.
-  - **transform(raw_X)** : Transform a sequence of instances to a scipy.sparse matrix.
 
 
 ## [*TfidfVectorizer*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html?highlight=tfidfvectorizer)
@@ -69,6 +52,8 @@
   - **use_idf** : bool, default=True
   - **smooth_idf** : bool, default=True
   - **sublinear_tf** : bool, default=False
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **vocabulary_** : dict
@@ -114,6 +99,8 @@
   - **dtype** : type, default=np.int64
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **vocabulary_** : dict
   - **fixed_vocabulary_** : bool
   - **stop_words_** : set
@@ -141,6 +128,8 @@
   - **threshold** : float, default=0
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **variances_** : array, shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
@@ -162,6 +151,8 @@
   #### *List of parameters:*
   - **score_func** : callable, default=f_classif
   - **k** : int or “all”, default=10
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
@@ -186,6 +177,8 @@
   #### *List of parameters:*
   - **score_func** : callable, default=f_classif
   - **percentile** : int, default=10
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
@@ -213,6 +206,8 @@
   - **param** : float or int depending on the feature selection mode, default=1e-5
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
   - **pvalues_** : array-like of shape (n_features,)
   - **n_features_in_** : int
@@ -229,26 +224,6 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## [*mutual_info_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_regression.html?highlight=mutual_info_regression)
-  sklearn.feature_selection.mutual_info_regression(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
-## [*mutual_info_classif*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_classif.html?highlight=mutual_info_classif)
-  sklearn.feature_selection.mutual_info_classif(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
 ## [*RFE*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
   class sklearn.feature_selection.RFE(estimator, *, n_features_to_select=None, step=1, verbose=0, importance_getter='auto')[source]¶
 
@@ -261,6 +236,8 @@
   - **X** : array of shape [n_samples, n_features]
   - **y** : array of shape [n_samples]
   - ****fit_params** : dict
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **estimator_** : ndarray of shape (n_classes,)
@@ -307,6 +284,8 @@
   - ****fit_params** : dict
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **estimator_** : ndarray of shape (n_classes,)
   - **cv_results_** : Estimator instance
   - **n_features_** : ndarray of shape (n_subsets_of_features,)
@@ -345,6 +324,8 @@
   - **importance_getter** : str or callable, default=’auto’
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **estimator_** : estimator
   - **max_features_** : int
   - **feature_names_in_** : int
@@ -372,6 +353,8 @@
   - **scoring** : str, callable, list/tuple or dict, default=None
   - **cv** : int, cross-validation generator or an iterable, default=None
   - **n_jobs** : int, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **n_features_in_** : int
@@ -402,6 +385,8 @@
   - **add_indicator** : bool, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **statistics_** : array of shape (n_features,)
   - **indicator_** : MissingIndicator
   - **n_features_in_** : int
@@ -429,6 +414,8 @@
   - **add_indicator** : bool, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **indicator_** : MissingIndicator
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
@@ -450,6 +437,8 @@
   - **features** : {‘missing-only’, ‘all’}, default=’missing-only’
   - **sparse** : bool or ‘auto’, default=’auto’
   - **error_on_new** : bool, default=True
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **features_** : ndarray of shape (n_missing_features,) or (n_features,)
@@ -478,6 +467,8 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **scale_** : ndarray of shape (n_features,) or None
@@ -509,6 +500,8 @@
   - **clip** : bool, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **min_** : ndarray of shape (n_features,)
   - **scale_** : ndarray of shape (n_features,)
   - **data_min_** : ndarray of shape (n_features,)
@@ -534,6 +527,8 @@
 
   #### *List of parameters:*
   - **copy** : bool, default=True
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **scale_** : ndarray of shape (n_features,)
@@ -567,6 +562,8 @@
   - **inv_kw_args** : dict, default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
 
@@ -589,6 +586,8 @@
   - **include_bias** : bool, default=True
   - **order** : {‘C’, ‘F’}, default=’C’
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **n_features_in_** : ndarray of shape (n_output_features_, n_features_in_)
@@ -616,6 +615,8 @@
   - **dtype** : {np.float32, np.float64}, default=None
   - **subsample** : int or None (default=’warn’)
   - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **bin_edges_** : ndarray of ndarray of shape (n_features,)
@@ -646,6 +647,8 @@
   - **max_categories** : int, default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **categories_** : list of arrays
   - **drop_idx_** : array of shape (n_features,)
   - **n_features_in_** : list of ndarray
@@ -662,22 +665,6 @@
   - **transform(X)** : Transform X using one-hot encoding.
 
 
-## [*LabelEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
-  class sklearn.preprocessing.LabelEncoder[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **fit(y)** : Fit label encoder.
-  - **fit_transform(y)** : Fit label encoder and return encoded labels.
-  - **get_params([deep])** : Get parameters for this estimator.
-  - **inverse_transform(y)** : Transform labels back to original encoding.
-  - **set_params(\*\*params)** : Set the parameters of this estimator.
-  - **transform(y)** : Transform labels to normalized encoding.
-
-
 ## [*OrdinalEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html)
   class sklearn.preprocessing.OrdinalEncoder(*, categories='auto', dtype=<class 'numpy.float64'>, handle_unknown='error', unknown_value=None, encoded_missing_value=nan)[source]¶
 
@@ -687,6 +674,8 @@
   - **handle_unknown** : {‘error’, ‘use_encoded_value’}, default=’error’
   - **unknown_value** : int or np.nan, default=None
   - **encoded_missing_value** : int or np.nan, default=np.nan
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **categories_** : list of arrays
@@ -710,6 +699,8 @@
   - **Y** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
   - **threshold** : float, default=None
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **y** : {ndarray, sparse matrix} of shape (n_samples,)
 
@@ -722,38 +713,14 @@
   - **transform(y)** : Transform multi-class labels to binary labels.
 
 
-## [*MultiLabelBinarizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html)
-  class sklearn.preprocessing.MultiLabelBinarizer(*, classes=None, sparse_output=False)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **fit(y)** : Fit the label sets binarizer, storing classes_.
-  - **fit_transform(y)** : Fit the label sets binarizer and transform the given label sets.
-  - **get_params([deep])** : Get parameters for this estimator.
-  - **inverse_transform(yt)** : Transform the given indicator matrix into label sets.
-  - **set_params(\*\*params)** : Set the parameters of this estimator.
-  - **transform(y)** : Transform the given label sets.
-
-
-## [*add_dummy_feature*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.add_dummy_feature.html)
-  sklearn.preprocessing.add_dummy_feature(X, value=1.0)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
 ## [*Normalizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
   class sklearn.preprocessing.Normalizer(norm='l2', *, copy=True)[source]¶
 
   #### *List of parameters:*
   - **norm** : {‘l1’, ‘l2’, ‘max’}, default=’l2’
   - **copy** : bool, default=True
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **n_features_in_** : int
@@ -779,6 +746,8 @@
   - **transformer_weights** : dict, default=None
   - **verbose** : bool, default=False
   - **verbose_feature_names_out** : bool, default=True
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **transformers_** : list
@@ -807,6 +776,8 @@
   - **check_inverse** : bool, default=True
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **regressor_** : object
   - **transformer_** : object
   - **feature_names_in_** : int
@@ -831,6 +802,8 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_targets)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **coef_** : array of shape (n_features, ) or (n_targets, n_features)
@@ -874,6 +847,8 @@
   - **average** : bool or int, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,)
   - **intercept_** : ndarray of shape (1,)
   - **n_iter_** : int
@@ -911,6 +886,8 @@
   - **y** : {ndarray, sparse matrix} of shape (n_samples,) or             (n_samples, n_targets)
   - **sample_weight** : float or array-like of shape (n_samples,), default=None
   - **check_input** : bool, default=True
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,) or (n_targets, n_features)
@@ -951,6 +928,8 @@
   - **selection** : {‘cyclic’, ‘random’}, default=’cyclic’
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **alpha_** : float
   - **coef_** : ndarray of shape (n_features,) or (n_targets, n_features)
   - **intercept_** : float or ndarray of shape (n_targets,)
@@ -985,6 +964,8 @@
   - **random_state** : int, RandomState instance, default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,) or (n_targets, n_features)
   - **intercept_** : float or ndarray of shape (n_targets,)
   - **n_iter_** : None or ndarray of shape (n_targets,)
@@ -1011,6 +992,8 @@
   - **gcv_mode** : {‘auto’, ‘svd’, ‘eigen’}, default=’auto’
   - **store_cv_values** : bool, default=False
   - **alpha_per_target** : bool, default=False
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **cv_values_** : ndarray of shape (n_samples, n_alphas) or             shape (n_samples, n_targets, n_alphas), optional
@@ -1051,6 +1034,8 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **sample_weight** : array-like of shape (n_samples,) default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes, )
@@ -1094,6 +1079,8 @@
   - **multi_class** : {‘auto, ‘ovr’, ‘multinomial’}, default=’auto’
   - **random_state** : int, RandomState instance, default=None
   - **l1_ratios** : list of float, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes, )
@@ -1149,6 +1136,8 @@
   - **average** : bool or int, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) if n_classes == 2 else             (n_classes, n_features)
   - **intercept_** : ndarray of shape (1,) if n_classes == 2 else (n_classes,)
   - **n_iter_** : int
@@ -1191,6 +1180,8 @@
   - **sample_weight** : float or ndarray of shape (n_samples,), default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) or (n_classes, n_features)
   - **intercept_** : float or ndarray of shape (n_targets,)
   - **n_iter_** : None or ndarray of shape (n_targets,)
@@ -1218,6 +1209,8 @@
   - **cv** : int, cross-validation generator or an iterable, default=None
   - **class_weight** : dict or ‘balanced’, default=None
   - **store_cv_values** : bool, default=False
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **cv_values_** : ndarray of shape (n_samples, n_targets, n_alphas), optional
@@ -1257,6 +1250,8 @@
   - **n_iter_no_change** : int, default=5
   - **class_weight** : dict, {class_label: weight} or “balanced”, default=None
   - **warm_start** : bool, default=False
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,)
@@ -1299,6 +1294,8 @@
   - **decision_function_shape** : {‘ovo’, ‘ovr’}, default=’ovr’
   - **break_ties** : bool, default=False
   - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **class_weight_** : ndarray of shape (n_classes,)
@@ -1345,6 +1342,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) if n_classes == 2             else (n_classes, n_features)
   - **intercept_** : ndarray of shape (1,) if n_classes == 2 else (n_classes,)
   - **classes_** : ndarray of shape (n_classes,)
@@ -1375,6 +1374,8 @@
   - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1410,6 +1411,8 @@
   - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1448,6 +1451,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
   - **class_log_prior_** : ndarray of shape (n_classes,)
   - **classes_** : ndarray of shape (n_classes,)
@@ -1480,6 +1485,8 @@
   - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1522,6 +1529,8 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,) or list of ndarray
@@ -1568,6 +1577,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **max_features_** : ndarray of shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : int
@@ -1600,6 +1611,8 @@
   - **metric** : str or callable, default=’minkowski’
   - **metric_params** : dict, default=None
   - **n_jobs** : int, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : array of shape (n_classes,)
@@ -1639,6 +1652,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **cluster_centers_** : ndarray of shape (n_clusters, n_features)
   - **labels_** : ndarray of shape (n_samples,)
   - **inertia_** : float
@@ -1671,6 +1686,8 @@
   - **linkage** : {‘ward’, ‘complete’, ‘average’, ‘single’}, default=’ward’
   - **distance_threshold** : float, default=None
   - **compute_distances** : bool, default=False
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **n_clusters_** : int
@@ -1711,6 +1728,8 @@
   - **class_weight** : {“balanced”, “balanced_subsample”}, dict or list of dicts,             default=None
   - **ccp_alpha** : non-negative float, default=0.0
   - **max_samples** : int or float, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **base_estimator_** : DecisionTreeClassifier
@@ -1758,6 +1777,8 @@
   - **max_samples** : int or float, default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **base_estimator_** : DecisionTreeRegressor
   - **estimators_** : list of DecisionTreeRegressor
   - **n_features_in_** : ndarray of shape (n_features,)
@@ -1785,6 +1806,8 @@
   - **learning_rate** : float, default=1.0
   - **algorithm** : {‘SAMME’, ‘SAMME.R’}, default=’SAMME.R’
   - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1822,6 +1845,8 @@
   - **random_state** : int, RandomState instance or None, default=None
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **base_estimator_** : estimator
   - **estimators_** : list of regressors
   - **estimator_weights_** : ndarray of floats
@@ -1854,6 +1879,8 @@
   - **n_jobs** : int, default=None
   - **random_state** : int, RandomState instance or None, default=None
   - **verbose** : int, default=0
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1892,6 +1919,8 @@
   - **n_jobs** : int, default=None
   - **random_state** : int, RandomState instance or None, default=None
   - **verbose** : int, default=0
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1934,6 +1963,8 @@
   - **n_iter_no_change** : int, default=None
   - **tol** : float, default=1e-4
   - **ccp_alpha** : non-negative float, default=0.0
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **n_estimators_** : int
@@ -1989,6 +2020,8 @@
   - **ccp_alpha** : non-negative float, default=0.0
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **oob_improvement_** : ndarray of shape (n_features,)
   - **train_score_** : ndarray of shape (n_estimators,)
   - **init_** : ndarray of shape (n_estimators,)
@@ -2037,6 +2070,8 @@
   - **max_fun** : int, default=15000
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **classes_** : ndarray or list of ndarray of shape (n_classes,)
   - **loss_** : float
   - **best_loss_** : float
@@ -2073,6 +2108,8 @@
   - **return_std** : bool, default=False
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **constant_** : ndarray of shape (1, n_outputs)
   - **n_outputs_** : None
   - **y** : int
@@ -2093,6 +2130,8 @@
   - **strategy** : {“most_frequent”, “prior”, “stratified”, “uniform”,             “constant”}, default=”prior”
   - **random_state** : int, RandomState instance or None, default=None
   - **constant** : int or str or array-like of shape (n_outputs,), default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,) or list of such arrays
@@ -2118,6 +2157,8 @@
   - **return_X_y** : bool, default=False
   - **as_frame** : bool, default=False
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **data** : Bunch
   - **(data, target)** : tuple if return_X_y is True
@@ -2138,6 +2179,8 @@
   - **download_if_missing** : bool, default=True
   - **return_X_y** : bool, default=False
   - **as_frame** : bool, default=False
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **dataset** : Bunch
@@ -2165,19 +2208,11 @@
   - **n_retries** : int, default=3
   - **delay** : float, default=1.0
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **data** : Bunch
   - **(data, target)** : tuple if return_X_y is True
-
-  #### *List of methods:*
-
-
-## [*make_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_regression.html)
-  sklearn.datasets.make_regression(n_samples=100, n_features=100, *, n_informative=10, n_targets=1, bias=0.0, effective_rank=None, tail_strength=0.5, noise=0.0, shuffle=True, coef=False, random_state=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
 
   #### *List of methods:*
 
@@ -2195,20 +2230,12 @@
   - **random_state** : int, RandomState instance or None, default=None
   - **return_centers** : bool, default=False
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **X** : ndarray of shape (n_samples, n_features)
   - **y** : ndarray of shape (n_samples,)
   - **centers** : ndarray of shape (n_centers, n_features)
-
-  #### *List of methods:*
-
-
-## [*make_classification*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html)
-  sklearn.datasets.make_classification(n_samples=100, n_features=20, *, n_informative=2, n_redundant=2, n_repeated=0, n_classes=2, n_clusters_per_class=2, weights=None, flip_y=0.01, class_sep=1.0, hypercube=True, shift=0.0, scale=1.0, shuffle=True, random_state=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
 
   #### *List of methods:*
 
@@ -2227,6 +2254,8 @@
   - **return_indicator** : {‘dense’, ‘sparse’} or False, default=’dense’
   - **return_distributions** : bool, default=False
   - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **X** : ndarray of shape (n_samples, n_features)
@@ -2247,6 +2276,8 @@
   - **random_state** : int, RandomState instance or None, default=None
   - **shuffle** : bool, default=True
   - **stratify** : array-like, default=None
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **splitting** : list, length=2 * len(arrays)
@@ -2272,6 +2303,8 @@
   - **return_estimator** : bool, default=False
   - **error_score** : ‘raise’ or numeric, default=np.nan
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **scores** : dict of float arrays of shape (n_splits,)
 
@@ -2294,6 +2327,8 @@
   - **pre_dispatch** : int or str, default=’2*n_jobs’
   - **error_score** : ‘raise’ or numeric, default=np.nan
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **scores** : ndarray of float of shape=(len(list(cv)),)
 
@@ -2314,6 +2349,8 @@
   - **fit_params** : dict, default=None
   - **pre_dispatch** : int or str, default=’2*n_jobs’
   - **method** : {‘predict’, ‘predict_proba’, ‘predict_log_proba’,               ‘decision_function’}, default=’predict’
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **predictions** : ndarray
@@ -2341,6 +2378,8 @@
   - **error_score** : ‘raise’ or numeric, default=np.nan
   - **return_times** : bool, default=False
   - **fit_params** : dict, default=None
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **train_sizes_abs** : array of shape (n_unique_ticks,)
@@ -2370,23 +2409,13 @@
   - **fit_params** : dict, default=None
   - **error_score** : ‘raise’ or numeric, default=np.nan
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **train_scores** : array of shape (n_ticks, n_cv_folds)
   - **test_scores** : array of shape (n_ticks, n_cv_folds)
 
   #### *List of methods:*
-
-
-## [*ShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html)
-  class sklearn.model_selection.ShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **get_n_splits([X, y, groups])** : Returns the number of splitting iterations in the cross-validator
-  - **split(X[, y, groups])** : Generate indices to split data into training and test set.
 
 
 ## [*StratifiedShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html)
@@ -2396,6 +2425,8 @@
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_labels)
   - **groups** : object
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **train** : ndarray
@@ -2421,6 +2452,8 @@
   - **random_state** : int, RandomState instance or None, default=0
   - **verbose** : int, default=0
   - **fit_params** : dict, default=None
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **score** : float
@@ -2448,6 +2481,8 @@
   - **y** : array-like of shape (n_samples, n_output)             or (n_samples,), default=None
   - **groups** : array-like of shape (n_samples,), default=None
   - ****fit_params** : dict of str -> object
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **cv_results_** : dict of numpy (masked) ndarrays
@@ -2502,6 +2537,8 @@
   - ****fit_params** : dict of str -> object
 
   #### *List of attributes:*
+
+  #### *List of attributes:*
   - **cv_results_** : dict of numpy (masked) ndarrays
   - **best_estimator_** : estimator
   - **best_score_** : float
@@ -2541,6 +2578,8 @@
   - **multioutput** : {‘raw_values’, ‘uniform_average’} or array-like of shape             (n_outputs,), default=’uniform_average’
   - **squared** : bool, default=True
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **loss** : float or ndarray of floats
 
@@ -2556,6 +2595,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **multioutput** : {‘raw_values’, ‘uniform_average’}  or array-like of shape             (n_outputs,), default=’uniform_average’
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **loss** : float or ndarray of floats
 
@@ -2570,6 +2611,8 @@
   - **y_pred** : array-like of shape (n_samples,) or (n_samples, n_outputs)
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **multioutput** : {‘raw_values’, ‘uniform_average’} or array-like
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **loss** : float or ndarray of floats
@@ -2588,18 +2631,10 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **labels** : array-like, default=None
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **loss** : float
-
-  #### *List of methods:*
-
-
-## [*hinge_loss*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hinge_loss.html)
-  sklearn.metrics.hinge_loss(y_true, pred_decision, *, labels=None, sample_weight=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
 
   #### *List of methods:*
 
@@ -2613,6 +2648,8 @@
   - **labels** : array-like of shape (n_classes), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **normalize** : {‘true’, ‘pred’, ‘all’}, default=None
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **C** : ndarray of shape (n_classes, n_classes)
@@ -2659,6 +2696,8 @@
   - **colorbar** : bool, default=True
   - **im_kw** : dict, default=None
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **display** : ConfusionMatrixDisplay
   - **display** : ConfusionMatrixDisplay
@@ -2682,6 +2721,8 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **zero_division** : “warn”, 0 or 1, default=”warn”
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **precision** : float (if average is not None) or array of float of shape                 (n_unique_labels,)
 
@@ -2700,18 +2741,10 @@
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **zero_division** : “warn”, 0 or 1, default=”warn”
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **recall** : float (if average is not None) or array of float of shape              (n_unique_labels,)
-
-  #### *List of methods:*
-
-
-## [*silhouette_score*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html)
-  sklearn.metrics.silhouette_score(X, labels, *, metric='euclidean', sample_size=None, random_state=None, **kwds)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
 
   #### *List of methods:*
 
@@ -2725,6 +2758,8 @@
   - **needs_proba** : bool, default=False
   - **needs_threshold** : bool, default=False
   - ****kwargs** : additional arguments
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **scorer** : callable
@@ -2745,18 +2780,10 @@
   - **output_dict** : bool, default=False
   - **zero_division** : “warn”, 0 or 1, default=”warn”
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **report** : str or dict
-
-  #### *List of methods:*
-
-
-## [*precision_recall_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html)
-  sklearn.metrics.precision_recall_curve(y_true, probas_pred, *, pos_label=None, sample_weight=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
 
   #### *List of methods:*
 
@@ -2770,6 +2797,8 @@
   - **pos_label** : int or str, default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
   - **drop_intermediate** : bool, default=True
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **fpr** : ndarray of shape (>2,)
@@ -2794,6 +2823,8 @@
   - **pos_label** : str or int, default=None
   - ****kwargs** : dict
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **display** : RocCurveDisplay
 
@@ -2813,6 +2844,8 @@
   - **n_oversamples** : int, default=10
   - **power_iteration_normalizer** : {‘auto’, ‘QR’, ‘LU’, ‘none’}, default=’auto’
   - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of attributes:*
 
   #### *List of attributes:*
   - **components_** : ndarray of shape (n_components, n_features)
@@ -2841,16 +2874,6 @@
   - **transform(X)** : Apply dimensionality reduction to X.
 
 
-## [*make_pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.make_pipeline.html)
-  sklearn.pipeline.make_pipeline(*steps, memory=None, verbose=False)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
 ## [*Pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
   class sklearn.pipeline.Pipeline(steps, *, memory=None, verbose=False)[source]¶
 
@@ -2860,6 +2883,8 @@
   - **verbose** : bool, default=False
   - **X** : iterable
   - ****predict_params** : dict of string -> object
+
+  #### *List of return values:*
 
   #### *List of attributes:*
   - **y_pred** : Bunch
@@ -2881,53 +2906,6 @@
   - **transform(X)** : Transform the data, and apply transform with the final estimator.
 
 
-## [*FeatureUnion*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html)
-  class sklearn.pipeline.FeatureUnion(transformer_list, *, n_jobs=None, transformer_weights=None, verbose=False)[source]¶
-
-  #### *List of parameters:*
-  - **transformer_list** : list of (str, transformer) tuples
-  - **n_jobs** : int, default=None
-  - **transformer_weights** : dict, default=None
-  - **verbose** : bool, default=False
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **fit(X[, y])** : Fit all transformers using X.
-  - **fit_transform(X[, y])** : Fit all transformers, transform the data and concatenate results.
-  - **get_feature_names()** : DEPRECATED: get_feature_names is deprecated in 1.0 and will be removed in 1.2.
-  - **get_feature_names_out([input_features])** : Get output feature names for transformation.
-  - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(\*\*kwargs)** : Set the parameters of this estimator.
-  - **transform(X)** : Transform X separately by each transformer, concatenate results.
-
-
-## [*set_config*](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html)
-  sklearn.set_config(assume_finite=None, working_memory=None, print_changed_only=None, display=None, pairwise_dist_chunk_size=None, enable_cython_pairwise_dist=None)[source]¶
-
-  #### *List of parameters:*
-  - **assume_finite** : bool, default=None
-  - **working_memory** : int, default=None
-  - **print_changed_only** : bool, default=None
-  - **display** : {‘text’, ‘diagram’}, default=None
-  - **pairwise_dist_chunk_size** : int, default=None
-  - **enable_cython_pairwise_dist** : bool, default=None
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
-## [*all_estimators*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.all_estimators.html)
-  sklearn.utils.all_estimators(type_filter=None)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-
-
 ## [*type_of_target*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.type_of_target.html)
   sklearn.utils.multiclass.type_of_target(y, input_name='')[source]¶
 
@@ -2935,28 +2913,9 @@
   - **y** : array-like
   - **input_name** : str, default=””
 
+  #### *List of return values:*
+
   #### *List of attributes:*
   - **target_type** : str
 
   #### *List of methods:*
-
-
-## [*Bunch*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
-  class sklearn.utils.Bunch(**kwargs)[source]¶
-
-  #### *List of parameters:*
-
-  #### *List of attributes:*
-
-  #### *List of methods:*
-  - **clear()** : 
-  - **copy()** : 
-  - **fromkeys(iterable[, value])** : Create a new dictionary with keys from iterable and values set to value.
-  - **get(key[, default])** : Return the value for key if key is in the dictionary, else default.
-  - **items()** : 
-  - **keys()** : 
-  - **pop(key[, default])** : If key is not found, default is returned if given, otherwise KeyError is raised
-  - **popitem(/)** : Remove and return a (key, value) pair as a 2-tuple.
-  - **setdefault(key[, default])** : Insert key with a value of default if key is not in the dictionary.
-  - **update([E, ]\*\*F)** : If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]
-  - **values()** : 
