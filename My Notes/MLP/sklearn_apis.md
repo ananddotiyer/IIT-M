@@ -4,13 +4,33 @@
   class sklearn.feature_extraction.DictVectorizer(*, dtype=<class 'numpy.float64'>, separator='=', sparse=True, sort=True)[source]¶
 
   #### *List of parameters:*
+  - **dtype** : dtype, default=np.float64
+  - **separator** : str, default=”=”
+  - **sparse** : bool, default=True
+  - **sort** : bool, default=True
   - **X** : Mapping or iterable over Mappings
   - **y** : (ignored)
   - **X** : Mapping or iterable over Mappings
   - **y** : (ignored)
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **dict_type** : type, default=dict
+  - **support** : array-like
+  - **indices** : bool, default=False
+  - ****params** : dict
+  - **X** : Mapping or iterable over Mappings of shape (n_samples,)
 
-  #### *List of return values:*
+  #### *List of attributes:*
+  - **vocabulary_** : dict
+  - **feature_names_** : list
   - **self** : object
+  - **Xa** : {array, sparse matrix}
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **D** : list of dict_type objects of shape (n_samples,)
+  - **self** : object
+  - **self** : estimator instance
   - **Xa** : {array, sparse matrix}
 
   #### *List of methods:*
@@ -23,6 +43,38 @@
   - **restrict(support[, indices])** : Restrict the features to those in support using feature selection.
   - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform feature->value dicts to array or sparse matrix.
+
+
+## [*FeatureHasher*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
+  class sklearn.feature_extraction.FeatureHasher(n_features=1048576, *, input_type='dict', dtype=<class 'numpy.float64'>, alternate_sign=True)[source]¶
+
+  #### *List of parameters:*
+  - **n_features** : int, default=2**20
+  - **input_type** : str, default=’dict’
+  - **dtype** : numpy dtype, default=np.float64
+  - **alternate_sign** : bool, default=True
+  - **X** : Ignored
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **deep** : bool, default=True
+  - ****params** : dict
+  - **raw_X** : iterable over iterable over raw features, length = n_samples
+
+  #### *List of return values:*
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **params** : dict
+  - **self** : estimator instance
+  - **X** : sparse matrix of shape (n_samples, n_features)
+
+  #### *List of methods:*
+  - **fit([X, y])** : No-op.
+  - **fit_transform(X[, y])** : Fit to data, then transform it.
+  - **get_params([deep])** : Get parameters for this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
+  - **transform(raw_X)** : Transform a sequence of instances to a scipy.sparse matrix.
 
 
 ## [*TfidfVectorizer*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html?highlight=tfidfvectorizer)
@@ -50,11 +102,28 @@
   - **use_idf** : bool, default=True
   - **smooth_idf** : bool, default=True
   - **sublinear_tf** : bool, default=False
+  - **doc** : bytes or str
+  - **raw_documents** : iterable
+  - **y** : None
+  - **raw_documents** : iterable
+  - **y** : None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - ****params** : dict
+  - **raw_documents** : iterable
 
   #### *List of attributes:*
   - **vocabulary_** : dict
   - **fixed_vocabulary_** : bool
   - **stop_words_** : array of shape (n_features,)
+  - **self** : set
+  - **X** : object
+  - **feature_names_out** : sparse matrix of (n_samples, n_features)
+  - **params** : ndarray of str objects
+  - **X_inv** : dict
+  - **self** : list of arrays of shape (n_samples,)
+  - **X** : estimator instance
 
   #### *List of methods:*
   - **build_analyzer()** : Return a callable to process input data.
@@ -93,11 +162,28 @@
   - **vocabulary** : Mapping or iterable, default=None
   - **binary** : bool, default=False
   - **dtype** : type, default=np.int64
+  - **doc** : bytes or str
+  - **raw_documents** : iterable
+  - **y** : None
+  - **raw_documents** : iterable
+  - **y** : None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - ****params** : dict
+  - **raw_documents** : iterable
 
   #### *List of attributes:*
   - **vocabulary_** : dict
   - **fixed_vocabulary_** : bool
   - **stop_words_** : set
+  - **self** : object
+  - **X** : array of shape (n_samples, n_features)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_inv** : list of arrays of shape (n_samples,)
+  - **self** : estimator instance
+  - **X** : sparse matrix of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **build_analyzer()** : Return a callable to process input data.
@@ -120,11 +206,30 @@
 
   #### *List of parameters:*
   - **threshold** : float, default=0
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : any, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **variances_** : array, shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **support** : array
+  - **X_r** : array of shape [n_samples, n_original_features]
+  - **self** : estimator instance
+  - **X_r** : array of shape [n_samples, n_selected_features]
 
   #### *List of methods:*
   - **fit(X[, y])** : Learn empirical variances from X.
@@ -143,12 +248,31 @@
   #### *List of parameters:*
   - **score_func** : callable, default=f_classif
   - **k** : int or “all”, default=10
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
   - **pvalues_** : array-like of shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **support** : array
+  - **X_r** : array of shape [n_samples, n_original_features]
+  - **self** : estimator instance
+  - **X_r** : array of shape [n_samples, n_selected_features]
 
   #### *List of methods:*
   - **fit(X, y)** : Run score function on (X, y) and get the appropriate features.
@@ -167,12 +291,31 @@
   #### *List of parameters:*
   - **score_func** : callable, default=f_classif
   - **percentile** : int, default=10
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
   - **pvalues_** : array-like of shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **support** : array
+  - **X_r** : array of shape [n_samples, n_original_features]
+  - **self** : estimator instance
+  - **X_r** : array of shape [n_samples, n_selected_features]
 
   #### *List of methods:*
   - **fit(X, y)** : Run score function on (X, y) and get the appropriate features.
@@ -192,12 +335,31 @@
   - **score_func** : callable, default=f_classif
   - **mode** : {‘percentile’, ‘k_best’, ‘fpr’, ‘fdr’, ‘fwe’}, default=’percentile’
   - **param** : float or int depending on the feature selection mode, default=1e-5
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **scores_** : array-like of shape (n_features,)
   - **pvalues_** : array-like of shape (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **support** : array
+  - **X_r** : array of shape [n_samples, n_original_features]
+  - **self** : estimator instance
+  - **X_r** : array of shape [n_samples, n_selected_features]
 
   #### *List of methods:*
   - **fit(X, y)** : Run score function on (X, y) and get the appropriate features.
@@ -210,6 +372,40 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
+## [*mutual_info_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_regression.html?highlight=mutual_info_regression)
+  sklearn.feature_selection.mutual_info_regression(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
+
+  #### *List of parameters:*
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **discrete_features** : {‘auto’, bool, array-like}, default=’auto’
+  - **n_neighbors** : int, default=3
+  - **copy** : bool, default=True
+  - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of return values:*
+  - **mi** : ndarray, shape (n_features,)
+
+  #### *List of methods:*
+
+
+## [*mutual_info_classif*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_classif.html?highlight=mutual_info_classif)
+  sklearn.feature_selection.mutual_info_classif(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
+
+  #### *List of parameters:*
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **discrete_features** : {‘auto’, bool, array-like}, default=’auto’
+  - **n_neighbors** : int, default=3
+  - **copy** : bool, default=True
+  - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of return values:*
+  - **mi** : ndarray, shape (n_features,)
+
+  #### *List of methods:*
+
+
 ## [*RFE*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
   class sklearn.feature_selection.RFE(estimator, *, n_features_to_select=None, step=1, verbose=0, importance_getter='auto')[source]¶
 
@@ -219,9 +415,25 @@
   - **step** : int or float, default=1
   - **verbose** : int, default=0
   - **importance_getter** : str or callable, default=’auto’
+  - **X** : {array-like or sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - ****fit_params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - **X** : array of shape [n_samples, n_features]
+  - **X** : array of shape [n_samples, n_features]
+  - **X** : {array-like or sparse matrix} of shape (n_samples, n_features)
   - **X** : array of shape [n_samples, n_features]
   - **y** : array of shape [n_samples]
   - ****fit_params** : dict
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **estimator_** : ndarray of shape (n_classes,)
@@ -231,6 +443,18 @@
   - **ranking_** : ndarray of shape (n_features_in_,)
   - **support_** : ndarray of shape (n_features,)
   - **score** : ndarray of shape (n_features,)
+  - **self** : array, shape = [n_samples, n_classes] or [n_samples]
+  - **X_new** : object
+  - **feature_names_out** : ndarray array of shape (n_samples, n_features_new)
+  - **params** : ndarray of str objects
+  - **support** : dict
+  - **X_r** : array
+  - **y** : array of shape [n_samples, n_original_features]
+  - **p** : array of shape [n_samples]
+  - **p** : array of shape (n_samples, n_classes)
+  - **score** : array of shape (n_samples, n_classes)
+  - **self** : float
+  - **X_r** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Compute the decision function of X.
@@ -260,12 +484,25 @@
   - **verbose** : int, default=0
   - **n_jobs** : int or None, default=None
   - **importance_getter** : str or callable, default=’auto’
+  - **X** : {array-like or sparse matrix} of shape (n_samples, n_features)
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **groups** : array-like of shape (n_samples,) or None, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - **X** : array of shape [n_samples, n_features]
+  - **X** : array of shape [n_samples, n_features]
+  - **X** : {array-like or sparse matrix} of shape (n_samples, n_features)
   - **X** : array of shape [n_samples, n_features]
   - **y** : array of shape [n_samples]
   - ****fit_params** : dict
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **estimator_** : ndarray of shape (n_classes,)
@@ -275,8 +512,19 @@
   - **feature_names_in_** : int
   - **ranking_** : int
   - **support_** : ndarray of shape (n_features_in_,)
-  - **self** : narray of shape (n_features,)
-  - **score** : ndarray of shape (n_features,)
+  - **score** : narray of shape (n_features,)
+  - **self** : ndarray of shape (n_features,)
+  - **X_new** : array, shape = [n_samples, n_classes] or [n_samples]
+  - **feature_names_out** : object
+  - **params** : ndarray array of shape (n_samples, n_features_new)
+  - **support** : ndarray of str objects
+  - **X_r** : dict
+  - **y** : array
+  - **p** : array of shape [n_samples, n_original_features]
+  - **p** : array of shape [n_samples]
+  - **score** : array of shape (n_samples, n_classes)
+  - **self** : array of shape (n_samples, n_classes)
+  - **X_r** : float
 
   #### *List of methods:*
   - **decision_function(X)** : Compute the decision function of X.
@@ -304,11 +552,35 @@
   - **norm_order** : non-zero int, inf, -inf, default=1
   - **max_features** : int, callable, default=None
   - **importance_getter** : str or callable, default=’auto’
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,), default=None
+  - ****fit_params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,), default=None
+  - ****fit_params** : dict
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **estimator_** : estimator
   - **max_features_** : int
   - **feature_names_in_** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **X_new** : float
+  - **feature_names_out** : object
+  - **params** : ndarray array of shape (n_samples, n_features_new)
+  - **support** : ndarray of str objects
+  - **X_r** : dict
+  - **self** : array
+  - **self** : array of shape [n_samples, n_original_features]
+  - **X_r** : object
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the SelectFromModel meta-transformer.
@@ -333,12 +605,31 @@
   - **scoring** : str, callable, list/tuple or dict, default=None
   - **cv** : int, cross-validation generator or an iterable, default=None
   - **n_jobs** : int, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **indices** : bool, default=False
+  - **X** : array of shape [n_samples, n_selected_features]
+  - ****params** : dict
+  - **X** : array of shape [n_samples, n_features]
 
   #### *List of attributes:*
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_features_to_select_** : int
   - **support_** : ndarray of shape (n_features,), dtype=bool
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **support** : array
+  - **X_r** : array of shape [n_samples, n_original_features]
+  - **self** : estimator instance
+  - **X_r** : array of shape [n_samples, n_selected_features]
 
   #### *List of methods:*
   - **fit(X[, y])** : Learn the features to select from X.
@@ -361,12 +652,29 @@
   - **verbose** : int, default=0
   - **copy** : bool, default=True
   - **add_indicator** : bool, default=False
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape                 (n_samples, n_features + n_features_missing_indicator)
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **statistics_** : array of shape (n_features,)
   - **indicator_** : MissingIndicator
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_original** : ndarray of shape (n_samples, n_features)
+  - **self** : estimator instance
+  - **X_imputed** : {ndarray, sparse matrix} of shape                 (n_samples, n_features_out)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the imputer on X.
@@ -388,11 +696,26 @@
   - **metric** : {‘nan_euclidean’} or callable, default=’nan_euclidean’
   - **copy** : bool, default=True
   - **add_indicator** : bool, default=False
+  - **X** : array-like shape of (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **indicator_** : MissingIndicator
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **self** : estimator instance
+  - **X** : array-like of shape (n_samples, n_output_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the imputer on X.
@@ -411,11 +734,25 @@
   - **features** : {‘missing-only’, ‘all’}, default=’missing-only’
   - **sparse** : bool or ‘auto’, default=’auto’
   - **error_on_new** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **features_** : ndarray of shape (n_missing_features,) or (n_features,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **Xt** : {ndarray, sparse matrix} of shape (n_samples, n_features)         or (n_samples, n_features_with_missing)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **self** : estimator instance
+  - **Xt** : {ndarray, sparse matrix} of shape (n_samples, n_features)         or (n_samples, n_features_with_missing)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the transformer on X.
@@ -436,9 +773,19 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **copy** : bool, default=None
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix of shape (n_samples, n_features)
+  - **copy** : bool, default=None
 
   #### *List of attributes:*
   - **scale_** : ndarray of shape (n_features,) or None
@@ -448,7 +795,13 @@
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_samples_seen_** : int or ndarray of shape (n_features,)
   - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_tr** : {ndarray, sparse matrix} of shape (n_samples, n_features)
   - **self** : object
+  - **self** : estimator instance
+  - **X_tr** : {ndarray, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y, sample_weight])** : Compute the mean and std to be used for later scaling.
@@ -468,6 +821,18 @@
   - **feature_range** : tuple (min, max), default=(0, 1)
   - **copy** : bool, default=True
   - **clip** : bool, default=False
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **min_** : ndarray of shape (n_features,)
@@ -478,6 +843,14 @@
   - **n_features_in_** : int
   - **n_samples_seen_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **Xt** : ndarray of shape (n_samples, n_features)
+  - **self** : object
+  - **self** : estimator instance
+  - **Xt** : ndarray of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Compute the minimum and maximum to be used for later scaling.
@@ -495,6 +868,18 @@
 
   #### *List of parameters:*
   - **copy** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **scale_** : ndarray of shape (n_features,)
@@ -502,6 +887,14 @@
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_samples_seen_** : int
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_tr** : {ndarray, sparse matrix} of shape (n_samples, n_features)
+  - **self** : object
+  - **self** : estimator instance
+  - **X_tr** : {ndarray, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Compute the maximum absolute value to be used for later scaling.
@@ -526,10 +919,27 @@
   - **feature_names_out** : callable, ‘one-to-one’ or None, default=None
   - **kw_args** : dict, default=None
   - **inv_kw_args** : dict, default=None
+  - **X** : array-like, shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : array-like, shape (n_samples, n_features)
+  - ****params** : dict
+  - **X** : array-like, shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_out** : array-like, shape (n_samples, n_features)
+  - **self** : estimator instance
+  - **X_out** : array-like, shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit transformer by checking X.
@@ -550,12 +960,27 @@
   - **include_bias** : bool, default=True
   - **order** : {‘C’, ‘F’}, default=’C’
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : list of str of shape (n_features,), default=None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **n_features_in_** : ndarray of shape (n_output_features_, n_features_in_)
   - **feature_names_in_** : int
   - **n_output_features_** : int
-  - **XP** : ndarray of shape (n_features_in_,)
+  - **self** : ndarray of shape (n_features_in_,)
+  - **X_new** : int
+  - **output_feature_names** : object
+  - **feature_names_out** : ndarray array of shape (n_samples, n_features_new)
+  - **params** : list of str of shape (n_output_features,)
+  - **self** : ndarray of str objects
+  - **XP** : dict
 
   #### *List of methods:*
   - **fit(X[, y])** : Compute number of output features.
@@ -577,12 +1002,29 @@
   - **dtype** : {np.float32, np.float64}, default=None
   - **subsample** : int or None (default=’warn’)
   - **random_state** : int, RandomState instance or None, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **Xt** : array-like of shape (n_samples, n_features)
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **bin_edges_** : ndarray of ndarray of shape (n_features,)
   - **n_bins_** : ndarray of shape (n_features,), dtype=np.int_
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **Xinv** : ndarray, dtype={np.float32, np.float64}
+  - **self** : estimator instance
+  - **Xt** : {ndarray, sparse matrix}, dtype={np.float32, np.float64}
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the estimator.
@@ -605,12 +1047,29 @@
   - **handle_unknown** : {‘error’, ‘ignore’, ‘infrequent_if_exist’},                      default=’error’
   - **min_frequency** : int or float, default=None
   - **max_categories** : int, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - **input_features** : list of str of shape (n_features,)
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape                 (n_samples, n_encoded_features)
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **categories_** : list of arrays
   - **drop_idx_** : array of shape (n_features,)
   - **n_features_in_** : list of ndarray
   - **feature_names_in_** : int
+  - **X_out** : ndarray of shape (n_features_in_,)
+  - **output_feature_names** : {ndarray, sparse matrix} of shape                 (n_samples, n_encoded_features)
+  - **feature_names_out** : ndarray of shape (n_output_features,)
+  - **params** : ndarray of str objects
+  - **X_tr** : dict
+  - **self** : ndarray of shape (n_samples, n_features)
+  - **X_out** : estimator instance
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit OneHotEncoder to X.
@@ -623,6 +1082,34 @@
   - **transform(X)** : Transform X using one-hot encoding.
 
 
+## [*LabelEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
+  class sklearn.preprocessing.LabelEncoder[source]¶
+
+  #### *List of parameters:*
+  - **y** : array-like of shape (n_samples,)
+  - **y** : array-like of shape (n_samples,)
+  - **deep** : bool, default=True
+  - **y** : ndarray of shape (n_samples,)
+  - ****params** : dict
+  - **y** : array-like of shape (n_samples,)
+
+  #### *List of return values:*
+  - **self** : returns an instance of self.
+  - **y** : array-like of shape (n_samples,)
+  - **params** : dict
+  - **y** : ndarray of shape (n_samples,)
+  - **self** : estimator instance
+  - **y** : array-like of shape (n_samples,)
+
+  #### *List of methods:*
+  - **fit(y)** : Fit label encoder.
+  - **fit_transform(y)** : Fit label encoder and return encoded labels.
+  - **get_params([deep])** : Get parameters for this estimator.
+  - **inverse_transform(y)** : Transform labels back to original encoding.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
+  - **transform(y)** : Transform labels to normalized encoding.
+
+
 ## [*OrdinalEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html)
   class sklearn.preprocessing.OrdinalEncoder(*, categories='auto', dtype=<class 'numpy.float64'>, handle_unknown='error', unknown_value=None, encoded_missing_value=nan)[source]¶
 
@@ -632,11 +1119,28 @@
   - **handle_unknown** : {‘error’, ‘use_encoded_value’}, default=’error’
   - **unknown_value** : int or np.nan, default=None
   - **encoded_missing_value** : int or np.nan, default=np.nan
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_encoded_features)
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **categories_** : list of arrays
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **X_tr** : ndarray of shape (n_samples, n_features)
+  - **self** : estimator instance
+  - **X_out** : ndarray of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the OrdinalEncoder to X.
@@ -652,11 +1156,27 @@
   class sklearn.preprocessing.LabelBinarizer(*, neg_label=0, pos_label=1, sparse_output=False)[source]¶
 
   #### *List of parameters:*
+  - **neg_label** : int, default=0
+  - **pos_label** : int, default=1
+  - **sparse_output** : bool, default=False
+  - **y** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **y** : {ndarray, sparse matrix} of shape (n_samples,) or                 (n_samples, n_classes)
+  - **deep** : bool, default=True
   - **Y** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
   - **threshold** : float, default=None
+  - ****params** : dict
+  - **y** : {array, sparse matrix} of shape (n_samples,) or                 (n_samples, n_classes)
 
-  #### *List of return values:*
+  #### *List of attributes:*
+  - **classes_** : ndarray of shape (n_classes,)
+  - **y_type_** : str
+  - **sparse_input_** : bool
+  - **self** : object
+  - **Y** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
+  - **params** : dict
   - **y** : {ndarray, sparse matrix} of shape (n_samples,)
+  - **self** : estimator instance
+  - **Y** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
 
   #### *List of methods:*
   - **fit(y)** : Fit label binarizer.
@@ -667,16 +1187,76 @@
   - **transform(y)** : Transform multi-class labels to binary labels.
 
 
+## [*MultiLabelBinarizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html)
+  class sklearn.preprocessing.MultiLabelBinarizer(*, classes=None, sparse_output=False)[source]¶
+
+  #### *List of parameters:*
+  - **classes** : array-like of shape (n_classes,), default=None
+  - **sparse_output** : bool, default=False
+  - **y** : iterable of iterables
+  - **y** : iterable of iterables
+  - **deep** : bool, default=True
+  - **yt** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
+  - ****params** : dict
+  - **y** : iterable of iterables
+
+  #### *List of attributes:*
+  - **classes_** : ndarray of shape (n_classes,)
+  - **self** : object
+  - **y_indicator** : {ndarray, sparse matrix} of shape (n_samples, n_classes)
+  - **params** : dict
+  - **y** : list of tuples
+  - **self** : estimator instance
+  - **y_indicator** : array or CSR matrix, shape (n_samples, n_classes)
+
+  #### *List of methods:*
+  - **fit(y)** : Fit the label sets binarizer, storing classes_.
+  - **fit_transform(y)** : Fit the label sets binarizer and transform the given label sets.
+  - **get_params([deep])** : Get parameters for this estimator.
+  - **inverse_transform(yt)** : Transform the given indicator matrix into label sets.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
+  - **transform(y)** : Transform the given label sets.
+
+
+## [*add_dummy_feature*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.add_dummy_feature.html)
+  sklearn.preprocessing.add_dummy_feature(X, value=1.0)[source]¶
+
+  #### *List of parameters:*
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **value** : float
+
+  #### *List of return values:*
+  - **X** : {ndarray, sparse matrix} of shape (n_samples, n_features + 1)
+
+  #### *List of methods:*
+
+
 ## [*Normalizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
   class sklearn.preprocessing.Normalizer(norm='l2', *, copy=True)[source]¶
 
   #### *List of parameters:*
   - **norm** : {‘l1’, ‘l2’, ‘max’}, default=’l2’
   - **copy** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs),                 default=None
+  - ****fit_params** : dict
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **copy** : bool, default=None
 
   #### *List of attributes:*
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray array of shape (n_samples, n_features_new)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **self** : estimator instance
+  - **X_tr** : {ndarray, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of methods:*
   - **fit(X[, y])** : Do nothing and return the estimator unchanged.
@@ -698,12 +1278,26 @@
   - **transformer_weights** : dict, default=None
   - **verbose** : bool, default=False
   - **verbose_feature_names_out** : bool, default=True
+  - **X** : {array-like, dataframe} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,…), default=None
+  - **X** : {array-like, dataframe} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,), default=None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****kwargs** : dict
+  - **X** : {array-like, dataframe} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **transformers_** : list
   - **sparse_output_** : Bunch
   - **output_indices_** : bool
   - **n_features_in_** : dict
+  - **self** : int
+  - **X_t** : ColumnTransformer
+  - **feature_names_out** : {array-like, sparse matrix} of                 shape (n_samples, sum_n_components)
+  - **params** : ndarray of str objects
+  - **self** : dict
+  - **X_t** : ColumnTransformer
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit all transformers using X.
@@ -724,11 +1318,26 @@
   - **func** : function, default=None
   - **inverse_func** : function, default=None
   - **check_inverse** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - ****fit_params** : dict
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - ****predict_params** : dict of str -> object
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **regressor_** : object
   - **transformer_** : object
   - **feature_names_in_** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **y_hat** : dict
+  - **score** : ndarray of shape (n_samples,)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y, \*\*fit_params)** : Fit the model according to the given training data.
@@ -750,6 +1359,12 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_targets)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : array of shape (n_features, ) or (n_targets, n_features)
@@ -759,6 +1374,10 @@
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **self** : object
+  - **params** : dict
+  - **C** : array, shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit linear model.
@@ -791,6 +1410,20 @@
   - **n_iter_no_change** : int, default=5
   - **warm_start** : bool, default=False
   - **average** : bool or int, default=False
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **coef_init** : ndarray of shape (n_features,), default=None
+  - **intercept_init** : ndarray of shape (1,), default=None
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : numpy array of shape (n_samples,)
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,)
@@ -799,6 +1432,11 @@
   - **t_** : int
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **params** : dict
+  - **self** : object
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **densify()** : Convert coefficient matrix to dense array format.
@@ -830,6 +1468,27 @@
   - **y** : {ndarray, sparse matrix} of shape (n_samples,) or             (n_samples, n_targets)
   - **sample_weight** : float or array-like of shape (n_samples,), default=None
   - **check_input** : bool, default=True
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : {array-like, sparse matrix} of shape (n_samples,) or         (n_samples, n_targets)
+  - **l1_ratio** : float, default=0.5
+  - **eps** : float, default=1e-3
+  - **n_alphas** : int, default=100
+  - **alphas** : ndarray, default=None
+  - **precompute** : ‘auto’, bool or array-like of shape             (n_features, n_features), default=’auto’
+  - **Xy** : array-like of shape (n_features,) or (n_features, n_targets),         default=None
+  - **copy_X** : bool, default=True
+  - **coef_init** : ndarray of shape (n_features, ), default=None
+  - **verbose** : bool or int, default=False
+  - **return_n_iter** : bool, default=False
+  - **positive** : bool, default=False
+  - **check_input** : bool, default=True
+  - ****params** : kwargs
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,) or (n_targets, n_features)
@@ -839,6 +1498,14 @@
   - **n_features_in_** : int or list of int
   - **feature_names_in_** : int
   - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **alphas** : dict
+  - **coefs** : ndarray of shape (n_alphas,)
+  - **dual_gaps** : ndarray of shape (n_features, n_alphas) or             (n_targets, n_features, n_alphas)
+  - **n_iters** : ndarray of shape (n_alphas,)
+  - **C** : list of int
+  - **score** : array, shape (n_samples,)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight, check_input])** : Fit model with coordinate descent.
@@ -868,6 +1535,28 @@
   - **positive** : bool, default=False
   - **random_state** : int, RandomState instance, default=None
   - **selection** : {‘cyclic’, ‘random’}, default=’cyclic’
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_targets)
+  - **sample_weight** : float or array-like of shape (n_samples,),                 default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : {array-like, sparse matrix} of shape (n_samples,) or         (n_samples, n_targets)
+  - **eps** : float, default=1e-3
+  - **n_alphas** : int, default=100
+  - **alphas** : ndarray, default=None
+  - **precompute** : ‘auto’, bool or array-like of shape             (n_features, n_features), default=’auto’
+  - **Xy** : array-like of shape (n_features,) or (n_features, n_targets),         default=None
+  - **copy_X** : bool, default=True
+  - **coef_init** : ndarray of shape (n_features, ), default=None
+  - **verbose** : bool or int, default=False
+  - **return_n_iter** : bool, default=False
+  - **positive** : bool, default=False
+  - ****params** : kwargs
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **alpha_** : float
@@ -879,6 +1568,15 @@
   - **n_iter_** : int
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **params** : dict
+  - **alphas** : ndarray of shape (n_alphas,)
+  - **coefs** : ndarray of shape (n_features, n_alphas) or             (n_targets, n_features, n_alphas)
+  - **dual_gaps** : ndarray of shape (n_alphas,)
+  - **n_iters** : list of int
+  - **C** : array, shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit linear model with coordinate descent.
@@ -902,6 +1600,15 @@
   - **solver** : {‘auto’, ‘svd’, ‘cholesky’, ‘lsqr’, ‘sparse_cg’,             ‘sag’, ‘saga’, ‘lbfgs’}, default=’auto’
   - **positive** : bool, default=False
   - **random_state** : int, RandomState instance, default=None
+  - **X** : {ndarray, sparse matrix} of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,) or (n_samples, n_targets)
+  - **sample_weight** : float or ndarray of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (n_features,) or (n_targets, n_features)
@@ -909,6 +1616,11 @@
   - **n_iter_** : None or ndarray of shape (n_targets,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **params** : dict
+  - **C** : array, shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Ridge regression model.
@@ -930,6 +1642,15 @@
   - **gcv_mode** : {‘auto’, ‘svd’, ‘eigen’}, default=’auto’
   - **store_cv_values** : bool, default=False
   - **alpha_per_target** : bool, default=False
+  - **X** : ndarray of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,) or (n_samples, n_targets)
+  - **sample_weight** : float or ndarray of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : array-like or sparse matrix, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **cv_values_** : ndarray of shape (n_samples, n_alphas) or             shape (n_samples, n_targets, n_alphas), optional
@@ -939,6 +1660,11 @@
   - **best_score_** : float or ndarray of shape (n_targets,)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **params** : dict
+  - **C** : array, shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Ridge regression model with cv.
@@ -968,8 +1694,17 @@
   - **n_jobs** : int, default=None
   - **l1_ratio** : float, default=None
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **sample_weight** : array-like of shape (n_samples,) default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes, )
@@ -978,6 +1713,13 @@
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_iter_** : ndarray of shape (n_classes,) or (1, )
+  - **scores** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **params** : dict
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **T** : array-like of shape (n_samples, n_classes)
+  - **T** : array-like of shape (n_samples, n_classes)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1013,6 +1755,18 @@
   - **multi_class** : {‘auto, ‘ovr’, ‘multinomial’}, default=’auto’
   - **random_state** : int, RandomState instance, default=None
   - **l1_ratios** : list of float, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,) default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes, )
@@ -1027,6 +1781,14 @@
   - **n_iter_** : ndarray of shape (n_classes, n_folds, n_cs) or (1, n_folds, n_cs)
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **scores** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **self** : object
+  - **params** : dict
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **T** : array-like of shape (n_samples, n_classes)
+  - **T** : array-like of shape (n_samples, n_classes)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1066,6 +1828,24 @@
   - **class_weight** : dict, {class_label: weight} or “balanced”, default=None
   - **warm_start** : bool, default=False
   - **average** : bool or int, default=False
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **coef_init** : ndarray of shape (n_classes, n_features), default=None
+  - **intercept_init** : ndarray of shape (n_classes,), default=None
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **classes** : ndarray of shape (n_classes,), default=None
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) if n_classes == 2 else             (n_classes, n_features)
@@ -1076,6 +1856,14 @@
   - **t_** : int
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **scores** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **self** : object
+  - **params** : dict
+  - **self** : object
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **T** : array-like, shape (n_samples, n_classes)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1105,9 +1893,16 @@
   - **solver** : {‘auto’, ‘svd’, ‘cholesky’, ‘lsqr’, ‘sparse_cg’,             ‘sag’, ‘saga’, ‘lbfgs’}, default=’auto’
   - **positive** : bool, default=False
   - **random_state** : int, RandomState instance, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **X** : {ndarray, sparse matrix} of shape (n_samples, n_features)
   - **y** : ndarray of shape (n_samples,)
   - **sample_weight** : float or ndarray of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, spare matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) or (n_classes, n_features)
@@ -1115,7 +1910,12 @@
   - **n_iter_** : None or ndarray of shape (n_targets,)
   - **n_features_in_** : ndarray of shape (n_classes,)
   - **feature_names_in_** : int
-  - **self** : ndarray of shape (n_features_in_,)
+  - **scores** : ndarray of shape (n_features_in_,)
+  - **self** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **params** : object
+  - **y_pred** : dict
+  - **score** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+  - **self** : float
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1137,6 +1937,16 @@
   - **cv** : int, cross-validation generator or an iterable, default=None
   - **class_weight** : dict or ‘balanced’, default=None
   - **store_cv_values** : bool, default=False
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : ndarray of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **sample_weight** : float or ndarray of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, spare matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **cv_values_** : ndarray of shape (n_samples, n_targets, n_alphas), optional
@@ -1146,6 +1956,12 @@
   - **best_score_** : float
   - **n_features_in_** : ndarray of shape (n_classes,)
   - **feature_names_in_** : int
+  - **scores** : ndarray of shape (n_features_in_,)
+  - **self** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **params** : object
+  - **y_pred** : dict
+  - **score** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+  - **self** : float
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1176,6 +1992,22 @@
   - **n_iter_no_change** : int, default=5
   - **class_weight** : dict, {class_label: weight} or “balanced”, default=None
   - **warm_start** : bool, default=False
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **coef_init** : ndarray of shape (n_classes, n_features), default=None
+  - **intercept_init** : ndarray of shape (n_classes,), default=None
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix}, shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
+  - **classes** : ndarray of shape (n_classes,), default=None
+  - **sample_weight** : array-like, shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,)
@@ -1186,6 +2018,13 @@
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_iter_** : int
   - **t_** : int
+  - **scores** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **self** : object
+  - **params** : dict
+  - **self** : object
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1218,6 +2057,18 @@
   - **decision_function_shape** : {‘ovo’, ‘ovr’}, default=’ovr’
   - **break_ties** : bool, default=False
   - **random_state** : int, RandomState instance or None, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)                 or (n_samples, n_samples)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features) or                 (n_samples_test, n_samples_train)
+  - **X** : array-like of shape (n_samples, n_features) or                 (n_samples_test, n_samples_train)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **class_weight_** : ndarray of shape (n_classes,)
@@ -1231,6 +2082,14 @@
   - **support_** : ndarray of shape (n_classes * (n_classes - 1) // 2,)
   - **support_vectors_** : ndarray of shape (n_SV)
   - **shape_fit_** : ndarray of shape (n_SV, n_features)
+  - **X** : ndarray of shape (n_classes,), dtype=int32
+  - **self** : ndarray of shape (n_classes * (n_classes - 1) / 2)
+  - **params** : ndarray of shape (n_classes * (n_classes - 1) / 2)
+  - **y_pred** : tuple of int of shape (n_dimensions_of_X,)
+  - **T** : ndarray of shape (n_samples, n_classes * (n_classes-1) / 2)
+  - **T** : object
+  - **score** : dict
+  - **self** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **decision_function(X)** : Evaluate the decision function for the samples in X.
@@ -1260,8 +2119,15 @@
   - **random_state** : int, RandomState instance or None, default=None
   - **max_iter** : int, default=1000
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **coef_** : ndarray of shape (1, n_features) if n_classes == 2             else (n_classes, n_features)
@@ -1270,7 +2136,12 @@
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_iter_** : int
+  - **scores** : ndarray of shape (n_samples,) or (n_samples, n_classes)
   - **self** : object
+  - **params** : dict
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **decision_function(X)** : Predict confidence scores for samples.
@@ -1292,8 +2163,19 @@
   - **class_prior** : array-like of shape (n_classes,), default=None
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1304,6 +2186,13 @@
   - **n_features_in_** : int
   - **feature_names_in_** : int
   - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **self** : dict
+  - **C** : object
+  - **C** : ndarray of shape (n_samples,)
+  - **C** : array-like of shape (n_samples, n_classes)
+  - **score** : array-like of shape (n_samples, n_classes)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Naive Bayes classifier according to X, y.
@@ -1325,10 +2214,18 @@
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1340,7 +2237,13 @@
   - **var_** : ndarray of shape (n_classes, n_features)
   - **theta_** : ndarray of shape (n_classes, n_features)
   - **self** : ndarray of shape (n_classes, n_features)
-  - **self** : object
+  - **params** : object
+  - **self** : dict
+  - **C** : object
+  - **C** : ndarray of shape (n_samples,)
+  - **C** : array-like of shape (n_samples, n_classes)
+  - **score** : array-like of shape (n_samples, n_classes)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Gaussian Naive Bayes according to X, y.
@@ -1363,8 +2266,19 @@
   - **class_prior** : array-like of shape (n_classes,), default=None
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1375,6 +2289,13 @@
   - **n_features_in_** : int
   - **feature_names_in_** : int
   - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **self** : dict
+  - **C** : object
+  - **C** : ndarray of shape (n_samples,)
+  - **C** : array-like of shape (n_samples, n_classes)
+  - **score** : array-like of shape (n_samples, n_classes)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Naive Bayes classifier according to X, y.
@@ -1397,8 +2318,19 @@
   - **norm** : bool, default=False
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
   - **classes** : array-like of shape (n_classes,), default=None
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **class_count_** : ndarray of shape (n_classes,)
@@ -1410,6 +2342,13 @@
   - **n_features_in_** : int
   - **feature_names_in_** : int
   - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **self** : dict
+  - **C** : object
+  - **C** : ndarray of shape (n_samples,)
+  - **C** : array-like of shape (n_samples, n_classes)
+  - **score** : array-like of shape (n_samples, n_classes)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit Naive Bayes classifier according to X, y.
@@ -1439,8 +2378,26 @@
   - **class_weight** : dict, list of dict or “balanced”, default=None
   - **ccp_alpha** : non-negative float, default=0.0
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **check_input** : bool, default=True
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,) or list of ndarray
@@ -1450,7 +2407,16 @@
   - **feature_names_in_** : int
   - **n_outputs_** : int
   - **tree_** : ndarray of shape (n_features_in_,)
-  - **ccp_path** : int
+  - **X_leaves** : int
+  - **ccp_path** : Tree instance
+  - **indicator** : array-like of shape (n_samples,)
+  - **self** : Bunch
+  - **params** : sparse matrix of shape (n_samples, n_nodes)
+  - **y** : DecisionTreeClassifier
+  - **proba** : dict
+  - **proba** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **score** : ndarray of shape (n_samples, n_classes) or list of n_outputs             such arrays if n_outputs > 1
+  - **self** : ndarray of shape (n_samples, n_classes) or list of n_outputs             such arrays if n_outputs > 1
 
   #### *List of methods:*
   - **apply(X[, check_input])** : Return the index of the leaf that each sample is predicted as.
@@ -1483,8 +2449,23 @@
   - **min_impurity_decrease** : float, default=0.0
   - **ccp_alpha** : non-negative float, default=0.0
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **check_input** : bool, default=True
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **check_input** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **max_features_** : ndarray of shape (n_features,)
@@ -1492,7 +2473,14 @@
   - **feature_names_in_** : int
   - **n_outputs_** : int
   - **tree_** : ndarray of shape (n_features_in_,)
-  - **ccp_path** : int
+  - **X_leaves** : int
+  - **ccp_path** : Tree instance
+  - **indicator** : array-like of shape (n_samples,)
+  - **self** : Bunch
+  - **params** : sparse matrix of shape (n_samples, n_nodes)
+  - **y** : DecisionTreeRegressor
+  - **score** : dict
+  - **self** : array-like of shape (n_samples,) or (n_samples, n_outputs)
 
   #### *List of methods:*
   - **apply(X[, check_input])** : Return the index of the leaf that each sample is predicted as.
@@ -1519,6 +2507,21 @@
   - **metric** : str or callable, default=’minkowski’
   - **metric_params** : dict, default=None
   - **n_jobs** : int, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features) or                 (n_samples, n_samples) if metric=’precomputed’
+  - **y** : {array-like, sparse matrix} of shape (n_samples,) or                 (n_samples, n_outputs)
+  - **deep** : bool, default=True
+  - **X** : array-like, shape (n_queries, n_features),             or (n_queries, n_indexed) if metric == ‘precomputed’,                 default=None
+  - **n_neighbors** : int, default=None
+  - **return_distance** : bool, default=True
+  - **X** : array-like of shape (n_queries, n_features),                 or (n_queries, n_indexed) if metric == ‘precomputed’,                 default=None
+  - **n_neighbors** : int, default=None
+  - **mode** : {‘connectivity’, ‘distance’}, default=’connectivity’
+  - **X** : array-like of shape (n_queries, n_features),                 or (n_queries, n_indexed) if metric == ‘precomputed’
+  - **X** : array-like of shape (n_queries, n_features),                 or (n_queries, n_indexed) if metric == ‘precomputed’
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : array of shape (n_classes,)
@@ -1528,6 +2531,15 @@
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **n_samples_fit_** : int
   - **outputs_2d_** : bool
+  - **self** : KNeighborsClassifier
+  - **params** : dict
+  - **neigh_dist** : ndarray of shape (n_queries, n_neighbors)
+  - **neigh_ind** : ndarray of shape (n_queries, n_neighbors)
+  - **A** : sparse-matrix of shape (n_queries, n_samples_fit)
+  - **y** : ndarray of shape (n_queries,) or (n_queries, n_outputs)
+  - **p** : ndarray of shape (n_queries, n_classes), or a list of n_outputs                 of such arrays if n_outputs > 1.
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y)** : Fit the k-nearest neighbors classifier from the training dataset.
@@ -1556,6 +2568,21 @@
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : Ignored
   - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **cluster_centers_** : ndarray of shape (n_clusters, n_features)
@@ -1565,6 +2592,14 @@
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **self** : object
+  - **labels** : ndarray of shape (n_samples,)
+  - **X_new** : ndarray of shape (n_samples, n_clusters)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **labels** : ndarray of shape (n_samples,)
+  - **score** : float
+  - **self** : estimator instance
+  - **X_new** : ndarray of shape (n_samples, n_clusters)
 
   #### *List of methods:*
   - **fit(X[, y, sample_weight])** : Compute k-means clustering.
@@ -1590,6 +2625,12 @@
   - **linkage** : {‘ward’, ‘complete’, ‘average’, ‘single’}, default=’ward’
   - **distance_threshold** : float, default=None
   - **compute_distances** : bool, default=False
+  - **X** : array-like, shape (n_samples, n_features) or                 (n_samples, n_samples)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features) or                 (n_samples, n_samples)
+  - **y** : Ignored
+  - **deep** : bool, default=True
+  - ****params** : dict
 
   #### *List of attributes:*
   - **n_clusters_** : int
@@ -1600,6 +2641,10 @@
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
   - **children_** : array-like of shape (n_samples-1, 2)
   - **distances_** : array-like of shape (n_nodes-1,)
+  - **self** : object
+  - **labels** : ndarray of shape (n_samples,)
+  - **params** : dict
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the hierarchical clustering from features, or distance matrix.
@@ -1630,6 +2675,19 @@
   - **class_weight** : {“balanced”, “balanced_subsample”}, dict or list of dicts,             default=None
   - **ccp_alpha** : non-negative float, default=0.0
   - **max_samples** : int or float, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **base_estimator_** : DecisionTreeClassifier
@@ -1641,6 +2699,16 @@
   - **n_outputs_** : ndarray of shape (n_features_in_,)
   - **oob_score_** : int
   - **oob_decision_function_** : ndarray of shape (n_features,)
+  - **X_leaves** : float
+  - **indicator** : ndarray of shape (n_samples, n_classes) or             (n_samples, n_classes, n_outputs)
+  - **n_nodes_ptr** : ndarray of shape (n_samples, n_estimators)
+  - **self** : sparse matrix of shape (n_samples, n_nodes)
+  - **params** : ndarray of shape (n_estimators + 1,)
+  - **y** : object
+  - **p** : dict
+  - **p** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+  - **score** : ndarray of shape (n_samples, n_classes), or a list of such arrays
+  - **self** : ndarray of shape (n_samples, n_classes), or a list of such arrays
 
   #### *List of methods:*
   - **apply(X)** : Apply trees in the forest to X, return leaf indices.
@@ -1675,6 +2743,17 @@
   - **warm_start** : bool, default=False
   - **ccp_alpha** : non-negative float, default=0.0
   - **max_samples** : int or float, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **base_estimator_** : DecisionTreeRegressor
@@ -1684,6 +2763,14 @@
   - **n_outputs_** : int
   - **oob_score_** : ndarray of shape (n_features_in_,)
   - **oob_prediction_** : int
+  - **X_leaves** : float
+  - **indicator** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+  - **n_nodes_ptr** : ndarray of shape (n_samples, n_estimators)
+  - **self** : sparse matrix of shape (n_samples, n_nodes)
+  - **params** : ndarray of shape (n_estimators + 1,)
+  - **y** : object
+  - **score** : dict
+  - **self** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
 
   #### *List of methods:*
   - **apply(X)** : Apply trees in the forest to X, return leaf indices.
@@ -1704,6 +2791,24 @@
   - **learning_rate** : float, default=1.0
   - **algorithm** : {‘SAMME’, ‘SAMME.R’}, default=’SAMME.R’
   - **random_state** : int, RandomState instance or None, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1714,6 +2819,18 @@
   - **estimator_errors_** : ndarray of floats
   - **n_features_in_** : ndarray of shape (n_features,)
   - **feature_names_in_** : int
+  - **score** : ndarray of shape (n_features_in_,)
+  - **self** : ndarray of shape of (n_samples, k)
+  - **params** : object
+  - **y** : dict
+  - **p** : ndarray of shape (n_samples,)
+  - **p** : ndarray of shape (n_samples, n_classes)
+  - **score** : ndarray of shape (n_samples, n_classes)
+  - **self** : float
+  - **score** : estimator instance
+  - **y** : generator of ndarray of shape (n_samples, k)
+  - **p** : generator of ndarray of shape (n_samples,)
+  - **z** : generator of ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **decision_function(X)** : Compute the decision function of X.
@@ -1739,6 +2856,19 @@
   - **learning_rate** : float, default=1.0
   - **loss** : {‘linear’, ‘square’, ‘exponential’}, default=’linear’
   - **random_state** : int, RandomState instance or None, default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1747,6 +2877,13 @@
   - **estimator_errors_** : ndarray of floats
   - **n_features_in_** : ndarray of shape (n_features,)
   - **feature_names_in_** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **params** : object
+  - **y** : dict
+  - **score** : ndarray of shape (n_samples,)
+  - **self** : float
+  - **y** : estimator instance
+  - **z** : generator of ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Build a boosted regressor from the training set (X, y).
@@ -1773,6 +2910,18 @@
   - **n_jobs** : int, default=None
   - **random_state** : int, RandomState instance or None, default=None
   - **verbose** : int, default=0
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1784,6 +2933,14 @@
   - **n_classes_** : list of arrays
   - **oob_score_** : ndarray of shape (n_classes,)
   - **oob_decision_function_** : int or list
+  - **score** : float
+  - **self** : ndarray of shape (n_samples, n_classes)
+  - **params** : ndarray of shape (n_samples, k)
+  - **y** : object
+  - **p** : dict
+  - **p** : ndarray of shape (n_samples,)
+  - **score** : ndarray of shape (n_samples, n_classes)
+  - **self** : ndarray of shape (n_samples, n_classes)
 
   #### *List of methods:*
   - **decision_function(X)** : Average of the decision functions of the base classifiers.
@@ -1811,6 +2968,15 @@
   - **n_jobs** : int, default=None
   - **random_state** : int, RandomState instance or None, default=None
   - **verbose** : int, default=0
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **base_estimator_** : estimator
@@ -1820,6 +2986,11 @@
   - **estimators_features_** : list of estimators
   - **oob_score_** : list of arrays
   - **oob_prediction_** : list of arrays
+  - **self** : float
+  - **params** : ndarray of shape (n_samples,)
+  - **y** : object
+  - **score** : dict
+  - **self** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Build a Bagging ensemble of estimators from the training set (X, y).
@@ -1853,6 +3024,23 @@
   - **n_iter_no_change** : int, default=None
   - **tol** : float, default=1e-4
   - **ccp_alpha** : non-negative float, default=0.0
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **monitor** : callable, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **n_estimators_** : int
@@ -1865,6 +3053,18 @@
   - **feature_names_in_** : ndarray of shape (n_classes,)
   - **n_classes_** : int
   - **max_features_** : int
+  - **X_leaves** : ndarray of shape (n_features_in_,)
+  - **score** : int
+  - **self** : int
+  - **params** : array-like of shape (n_samples, n_estimators, n_classes)
+  - **y** : ndarray of shape (n_samples, n_classes) or (n_samples,)
+  - **p** : object
+  - **p** : dict
+  - **score** : ndarray of shape (n_samples,)
+  - **self** : ndarray of shape (n_samples, n_classes)
+  - **score** : ndarray of shape (n_samples, n_classes)
+  - **y** : float
+  - **y** : estimator instance
 
   #### *List of methods:*
   - **apply(X)** : Apply trees in the ensemble to X, return leaf indices.
@@ -1906,6 +3106,18 @@
   - **n_iter_no_change** : int, default=None
   - **tol** : float, default=1e-4
   - **ccp_alpha** : non-negative float, default=0.0
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **monitor** : callable, default=None
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **oob_improvement_** : ndarray of shape (n_features,)
@@ -1916,6 +3128,13 @@
   - **n_features_in_** : ndarray of DecisionTreeRegressor of shape (n_estimators, 1)
   - **feature_names_in_** : int
   - **max_features_** : int
+  - **X_leaves** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **params** : int
+  - **y** : array-like of shape (n_samples, n_estimators)
+  - **score** : object
+  - **self** : dict
+  - **y** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **apply(X)** : Apply trees in the ensemble to X, return leaf indices.
@@ -1954,6 +3173,19 @@
   - **epsilon** : float, default=1e-8
   - **n_iter_no_change** : int, default=10
   - **max_fun** : int, default=15000
+  - **X** : ndarray or sparse matrix of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+  - **deep** : bool, default=True
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **classes** : array of shape (n_classes,), default=None
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : ndarray of shape (n_samples, n_features)
+  - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray or list of ndarray of shape (n_classes,)
@@ -1969,6 +3201,14 @@
   - **n_layers_** : int
   - **n_outputs_** : int
   - **out_activation_** : str
+  - **self** : object
+  - **params** : dict
+  - **self** : object
+  - **y** : ndarray, shape (n_samples,) or (n_samples, n_classes)
+  - **log_y_prob** : ndarray of shape (n_samples, n_classes)
+  - **y_prob** : ndarray of shape (n_samples, n_classes)
+  - **score** : float
+  - **self** : estimator instance
 
   #### *List of methods:*
   - **fit(X, y)** : Fit the model to data matrix X and target(s) y.
@@ -1989,13 +3229,25 @@
   - **constant** : int or float or array-like of shape (n_outputs,), default=None
   - **quantile** : float in [0.0, 1.0], default=None
   - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_features)
   - **return_std** : bool, default=False
+  - **X** : None or array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **constant_** : ndarray of shape (1, n_outputs)
   - **n_outputs_** : None
-  - **y** : int
+  - **self** : int
+  - **params** : object
+  - **y** : dict
   - **y_std** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **score** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit the random regressor.
@@ -2012,6 +3264,17 @@
   - **strategy** : {“most_frequent”, “prior”, “stratified”, “uniform”,             “constant”}, default=”prior”
   - **random_state** : int, RandomState instance or None, default=None
   - **constant** : int or str or array-like of shape (n_outputs,), default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : {array-like, object with finite length or shape}
+  - **X** : array-like of shape (n_samples, n_features)
+  - **X** : None or array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+  - ****params** : dict
 
   #### *List of attributes:*
   - **classes_** : ndarray of shape (n_classes,) or list of such arrays
@@ -2019,6 +3282,13 @@
   - **class_prior_** : ndarray of shape (n_classes,) or list of such arrays
   - **n_outputs_** : int
   - **sparse_output_** : None
+  - **self** : bool
+  - **params** : object
+  - **y** : dict
+  - **P** : array-like of shape (n_samples,) or (n_samples, n_outputs)
+  - **P** : ndarray of shape (n_samples, n_classes) or list of such arrays
+  - **score** : ndarray of shape (n_samples, n_classes) or list of such arrays
+  - **self** : float
 
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit the baseline classifier.
@@ -2091,6 +3361,30 @@
   #### *List of methods:*
 
 
+## [*make_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_regression.html)
+  sklearn.datasets.make_regression(n_samples=100, n_features=100, *, n_informative=10, n_targets=1, bias=0.0, effective_rank=None, tail_strength=0.5, noise=0.0, shuffle=True, coef=False, random_state=None)[source]¶
+
+  #### *List of parameters:*
+  - **n_samples** : int, default=100
+  - **n_features** : int, default=100
+  - **n_informative** : int, default=10
+  - **n_targets** : int, default=1
+  - **bias** : float, default=0.0
+  - **effective_rank** : int, default=None
+  - **tail_strength** : float, default=0.5
+  - **noise** : float, default=0.0
+  - **shuffle** : bool, default=True
+  - **coef** : bool, default=False
+  - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of return values:*
+  - **X** : ndarray of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,) or (n_samples, n_targets)
+  - **coef** : ndarray of shape (n_features,) or (n_features, n_targets)
+
+  #### *List of methods:*
+
+
 ## [*make_blobs*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html)
   sklearn.datasets.make_blobs(n_samples=100, n_features=2, *, centers=None, cluster_std=1.0, center_box=(- 10.0, 10.0), shuffle=True, random_state=None, return_centers=False)[source]¶
 
@@ -2108,6 +3402,33 @@
   - **X** : ndarray of shape (n_samples, n_features)
   - **y** : ndarray of shape (n_samples,)
   - **centers** : ndarray of shape (n_centers, n_features)
+
+  #### *List of methods:*
+
+
+## [*make_classification*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html)
+  sklearn.datasets.make_classification(n_samples=100, n_features=20, *, n_informative=2, n_redundant=2, n_repeated=0, n_classes=2, n_clusters_per_class=2, weights=None, flip_y=0.01, class_sep=1.0, hypercube=True, shift=0.0, scale=1.0, shuffle=True, random_state=None)[source]¶
+
+  #### *List of parameters:*
+  - **n_samples** : int, default=100
+  - **n_features** : int, default=20
+  - **n_informative** : int, default=2
+  - **n_redundant** : int, default=2
+  - **n_repeated** : int, default=0
+  - **n_classes** : int, default=2
+  - **n_clusters_per_class** : int, default=2
+  - **weights** : array-like of shape (n_classes,) or (n_classes - 1,),              default=None
+  - **flip_y** : float, default=0.01
+  - **class_sep** : float, default=1.0
+  - **hypercube** : bool, default=True
+  - **shift** : float, ndarray of shape (n_features,) or None, default=0.0
+  - **scale** : float, ndarray of shape (n_features,) or None, default=1.0
+  - **shuffle** : bool, default=True
+  - **random_state** : int, RandomState instance or None, default=None
+
+  #### *List of return values:*
+  - **X** : ndarray of shape (n_samples, n_features)
+  - **y** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
 
@@ -2276,15 +3597,48 @@
   #### *List of methods:*
 
 
+## [*ShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html)
+  class sklearn.model_selection.ShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)[source]¶
+
+  #### *List of parameters:*
+  - **n_splits** : int, default=10
+  - **test_size** : float or int, default=None
+  - **train_size** : float or int, default=None
+  - **random_state** : int, RandomState instance or None, default=None
+  - **X** : object
+  - **y** : object
+  - **groups** : object
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples,)
+  - **groups** : array-like of shape (n_samples,), default=None
+
+  #### *List of return values:*
+  - **n_splits** : int
+  - **train** : ndarray
+  - **test** : ndarray
+
+  #### *List of methods:*
+  - **get_n_splits([X, y, groups])** : Returns the number of splitting iterations in the cross-validator
+  - **split(X[, y, groups])** : Generate indices to split data into training and test set.
+
+
 ## [*StratifiedShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html)
   class sklearn.model_selection.StratifiedShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)[source]¶
 
   #### *List of parameters:*
+  - **n_splits** : int, default=10
+  - **test_size** : float or int, default=None
+  - **train_size** : float or int, default=None
+  - **random_state** : int, RandomState instance or None, default=None
+  - **X** : object
+  - **y** : object
+  - **groups** : object
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,) or (n_samples, n_labels)
   - **groups** : object
 
-  #### *List of attributes:*
+  #### *List of return values:*
+  - **n_splits** : int
   - **train** : ndarray
   - **test** : ndarray
 
@@ -2331,10 +3685,21 @@
   - **pre_dispatch** : int, or str, default=’2*n_jobs’
   - **error_score** : ‘raise’ or numeric, default=np.nan
   - **return_train_score** : bool, default=False
+  - **X** : indexable, length n_samples
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples, n_output)             or (n_samples,), default=None
   - **groups** : array-like of shape (n_samples,), default=None
   - ****fit_params** : dict of str -> object
+  - **deep** : bool, default=True
+  - **Xt** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples, n_output)             or (n_samples,), default=None
+  - **X** : iterable
+  - ****params** : dict
+  - **X** : indexable, length n_samples
 
   #### *List of attributes:*
   - **cv_results_** : dict of numpy (masked) ndarrays
@@ -2347,7 +3712,17 @@
   - **refit_time_** : float
   - **multimetric_** : bool
   - **feature_names_in_** : ndarray of shape (n_classes,)
-  - **self** : int
+  - **y_score** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **params** : ndarray of shape (n_samples,) or (n_samples, n_classes)                 or (n_samples, n_classes * (n_classes-1) / 2)
+  - **X** : object
+  - **y_pred** : dict
+  - **y_pred** : {ndarray, sparse matrix} of shape (n_samples, n_features)
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **score** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **y_score** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **self** : float
+  - **Xt** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **‘poly’** : –
@@ -2383,10 +3758,21 @@
   - **random_state** : int, RandomState instance or None, default=None
   - **error_score** : ‘raise’ or numeric, default=np.nan
   - **return_train_score** : bool, default=False
+  - **X** : indexable, length n_samples
   - **X** : array-like of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples, n_output)             or (n_samples,), default=None
   - **groups** : array-like of shape (n_samples,), default=None
   - ****fit_params** : dict of str -> object
+  - **deep** : bool, default=True
+  - **Xt** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : indexable, length n_samples
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : array-like of shape (n_samples, n_output)             or (n_samples,), default=None
+  - **X** : iterable
+  - ****params** : dict
+  - **X** : indexable, length n_samples
 
   #### *List of attributes:*
   - **cv_results_** : dict of numpy (masked) ndarrays
@@ -2399,7 +3785,17 @@
   - **refit_time_** : float
   - **multimetric_** : bool
   - **feature_names_in_** : ndarray of shape (n_classes,)
-  - **self** : int
+  - **y_score** : int
+  - **self** : ndarray of shape (n_features_in_,)
+  - **params** : ndarray of shape (n_samples,) or (n_samples, n_classes)                 or (n_samples, n_classes * (n_classes-1) / 2)
+  - **X** : object
+  - **y_pred** : dict
+  - **y_pred** : {ndarray, sparse matrix} of shape (n_samples, n_features)
+  - **y_pred** : ndarray of shape (n_samples,)
+  - **score** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **y_score** : ndarray of shape (n_samples,) or (n_samples, n_classes)
+  - **self** : float
+  - **Xt** : ndarray of shape (n_samples,)
 
   #### *List of methods:*
   - **‘rbf’** : 0.1
@@ -2481,6 +3877,21 @@
   #### *List of methods:*
 
 
+## [*hinge_loss*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hinge_loss.html)
+  sklearn.metrics.hinge_loss(y_true, pred_decision, *, labels=None, sample_weight=None)[source]¶
+
+  #### *List of parameters:*
+  - **y_true** : array of shape (n_samples,)
+  - **pred_decision** : array of shape (n_samples,) or (n_samples, n_classes)
+  - **labels** : array-like, default=None
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of return values:*
+  - **loss** : float
+
+  #### *List of methods:*
+
+
 ## [*confusion_matrix*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
   sklearn.metrics.confusion_matrix(y_true, y_pred, *, labels=None, sample_weight=None, normalize=None)[source]¶
 
@@ -2501,6 +3912,8 @@
   class sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix, *, display_labels=None)[source]¶
 
   #### *List of parameters:*
+  - **confusion_matrix** : ndarray of shape (n_classes, n_classes)
+  - **display_labels** : ndarray of shape (n_classes,), default=None
   - **estimator** : estimator instance
   - **X** : {array-like, sparse matrix} of shape (n_samples, n_features)
   - **y** : array-like of shape (n_samples,)
@@ -2536,7 +3949,11 @@
   - **colorbar** : bool, default=True
   - **im_kw** : dict, default=None
 
-  #### *List of return values:*
+  #### *List of attributes:*
+  - **im_** : matplotlib AxesImage
+  - **text_** : ndarray of shape (n_classes, n_classes), dtype=matplotlib Text,             or None
+  - **ax_** : matplotlib Axes
+  - **figure_** : matplotlib Figure
   - **display** : ConfusionMatrixDisplay
   - **display** : ConfusionMatrixDisplay
   - **display** : ConfusionMatrixDisplay
@@ -2583,6 +4000,23 @@
   #### *List of methods:*
 
 
+## [*silhouette_score*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html)
+  sklearn.metrics.silhouette_score(X, labels, *, metric='euclidean', sample_size=None, random_state=None, **kwds)[source]¶
+
+  #### *List of parameters:*
+  - **X** : array-like of shape (n_samples_a, n_samples_a) if metric ==             “precomputed” or (n_samples_a, n_features) otherwise
+  - **labels** : array-like of shape (n_samples,)
+  - **metric** : str or callable, default=’euclidean’
+  - **sample_size** : int, default=None
+  - **random_state** : int, RandomState instance or None, default=None
+  - ****kwds** : optional keyword parameters
+
+  #### *List of return values:*
+  - **silhouette** : float
+
+  #### *List of methods:*
+
+
 ## [*make_scorer*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html)
   sklearn.metrics.make_scorer(score_func, *, greater_is_better=True, needs_proba=False, needs_threshold=False, **kwargs)[source]¶
 
@@ -2614,6 +4048,23 @@
 
   #### *List of return values:*
   - **report** : str or dict
+
+  #### *List of methods:*
+
+
+## [*precision_recall_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html)
+  sklearn.metrics.precision_recall_curve(y_true, probas_pred, *, pos_label=None, sample_weight=None)[source]¶
+
+  #### *List of parameters:*
+  - **y_true** : ndarray of shape (n_samples,)
+  - **probas_pred** : ndarray of shape (n_samples,)
+  - **pos_label** : int or str, default=None
+  - **sample_weight** : array-like of shape (n_samples,), default=None
+
+  #### *List of return values:*
+  - **precision** : ndarray of shape (n_thresholds + 1,)
+  - **recall** : ndarray of shape (n_thresholds + 1,)
+  - **thresholds** : ndarray of shape (n_thresholds,)
 
   #### *List of methods:*
 
@@ -2670,6 +4121,18 @@
   - **n_oversamples** : int, default=10
   - **power_iteration_normalizer** : {‘auto’, ‘QR’, ‘LU’, ‘none’}, default=’auto’
   - **random_state** : int, RandomState instance or None, default=None
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **X** : array-like of shape (n_samples, n_components)
+  - **X** : array-like of shape (n_samples, n_features)
+  - **y** : Ignored
+  - **X** : array-like of shape (n_samples, n_features)
+  - ****params** : dict
+  - **X** : array-like of shape (n_samples, n_features)
 
   #### *List of attributes:*
   - **components_** : ndarray of shape (n_components, n_features)
@@ -2683,6 +4146,14 @@
   - **noise_variance_** : float
   - **n_features_in_** : int
   - **feature_names_in_** : ndarray of shape (n_features_in_,)
+  - **self** : object
+  - **X_new** : ndarray of shape (n_samples, n_components)
+  - **feature_names_out** : ndarray of str objects
+  - **params** : dict
+  - **ll** : float
+  - **ll** : ndarray of shape (n_samples,)
+  - **self** : estimator instance
+  - **X_new** : array-like of shape (n_samples, n_components)
 
   #### *List of methods:*
   - **fit(X[, y])** : Fit the model with X.
@@ -2698,6 +4169,20 @@
   - **transform(X)** : Apply dimensionality reduction to X.
 
 
+## [*make_pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.make_pipeline.html)
+  sklearn.pipeline.make_pipeline(*steps, memory=None, verbose=False)[source]¶
+
+  #### *List of parameters:*
+  - ***steps** : list of Estimator objects
+  - **memory** : str or object with the joblib.Memory interface, default=None
+  - **verbose** : bool, default=False
+
+  #### *List of return values:*
+  - **p** : Pipeline
+
+  #### *List of methods:*
+
+
 ## [*Pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
   class sklearn.pipeline.Pipeline(steps, *, memory=None, verbose=False)[source]¶
 
@@ -2706,10 +4191,46 @@
   - **memory** : str or object with the joblib.Memory interface, default=None
   - **verbose** : bool, default=False
   - **X** : iterable
+  - **X** : iterable
+  - **y** : iterable, default=None
+  - ****fit_params** : dict of string -> object
+  - **X** : iterable
+  - **y** : iterable, default=None
+  - ****fit_params** : dict of string -> object
+  - **X** : iterable
+  - **y** : iterable, default=None
+  - ****fit_params** : dict of string -> object
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - **Xt** : array-like of shape (n_samples, n_transformed_features)
+  - **X** : iterable
   - ****predict_params** : dict of string -> object
+  - **X** : iterable
+  - ****predict_log_proba_params** : dict of string -> object
+  - **X** : iterable
+  - ****predict_proba_params** : dict of string -> object
+  - **X** : iterable
+  - **y** : iterable, default=None
+  - **sample_weight** : array-like, default=None
+  - **X** : iterable
+  - ****kwargs** : dict
+  - **X** : iterable
 
   #### *List of return values:*
-  - **y_pred** : Bunch
+  - **y_score** : Bunch
+  - **self** : ndarray of shape (n_classes,)
+  - **y_pred** : int
+  - **Xt** : ndarray of shape (n_features_in_,)
+  - **feature_names_out** : ndarray of shape (n_samples, n_classes)
+  - **params** : object
+  - **Xt** : ndarray
+  - **y_pred** : ndarray of shape (n_samples, n_transformed_features)
+  - **y_log_proba** : ndarray of str objects
+  - **y_proba** : mapping of string to any
+  - **score** : ndarray of shape (n_samples, n_features)
+  - **y_score** : ndarray
+  - **self** : ndarray of shape (n_samples, n_classes)
+  - **Xt** : ndarray of shape (n_samples, n_classes)
 
   #### *List of methods:*
   - **decision_function(X)** : Transform the data, and apply decision_function with the final estimator.
@@ -2728,6 +4249,71 @@
   - **transform(X)** : Transform the data, and apply transform with the final estimator.
 
 
+## [*FeatureUnion*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html)
+  class sklearn.pipeline.FeatureUnion(transformer_list, *, n_jobs=None, transformer_weights=None, verbose=False)[source]¶
+
+  #### *List of parameters:*
+  - **transformer_list** : list of (str, transformer) tuples
+  - **n_jobs** : int, default=None
+  - **transformer_weights** : dict, default=None
+  - **verbose** : bool, default=False
+  - **X** : iterable or array-like, depending on transformers
+  - **y** : array-like of shape (n_samples, n_outputs), default=None
+  - ****fit_params** : dict, default=None
+  - **X** : iterable or array-like, depending on transformers
+  - **y** : array-like of shape (n_samples, n_outputs), default=None
+  - ****fit_params** : dict, default=None
+  - **input_features** : array-like of str or None, default=None
+  - **deep** : bool, default=True
+  - ****kwargs** : dict
+  - **X** : iterable or array-like, depending on transformers
+
+  #### *List of return values:*
+  - **self** : int
+  - **X_t** : object
+  - **feature_names_out** : array-like or sparse matrix of                 shape (n_samples, sum_n_components)
+  - **params** : ndarray of str objects
+  - **self** : mapping of string to any
+  - **X_t** : object
+
+  #### *List of methods:*
+  - **fit(X[, y])** : Fit all transformers using X.
+  - **fit_transform(X[, y])** : Fit all transformers, transform the data and concatenate results.
+  - **get_feature_names()** : DEPRECATED: get_feature_names is deprecated in 1.0 and will be removed in 1.2.
+  - **get_feature_names_out([input_features])** : Get output feature names for transformation.
+  - **get_params([deep])** : Get parameters for this estimator.
+  - **set_params(\*\*kwargs)** : Set the parameters of this estimator.
+  - **transform(X)** : Transform X separately by each transformer, concatenate results.
+
+
+## [*set_config*](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html)
+  sklearn.set_config(assume_finite=None, working_memory=None, print_changed_only=None, display=None, pairwise_dist_chunk_size=None, enable_cython_pairwise_dist=None)[source]¶
+
+  #### *List of parameters:*
+  - **assume_finite** : bool, default=None
+  - **working_memory** : int, default=None
+  - **print_changed_only** : bool, default=None
+  - **display** : {‘text’, ‘diagram’}, default=None
+  - **pairwise_dist_chunk_size** : int, default=None
+  - **enable_cython_pairwise_dist** : bool, default=None
+
+  #### *List of attributes:*
+
+  #### *List of methods:*
+
+
+## [*all_estimators*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.all_estimators.html)
+  sklearn.utils.all_estimators(type_filter=None)[source]¶
+
+  #### *List of parameters:*
+  - **type_filter** : {“classifier”, “regressor”, “cluster”, “transformer”}             or list of such str, default=None
+
+  #### *List of return values:*
+  - **estimators** : list of tuples
+
+  #### *List of methods:*
+
+
 ## [*type_of_target*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.type_of_target.html)
   sklearn.utils.multiclass.type_of_target(y, input_name='')[source]¶
 
@@ -2739,3 +4325,24 @@
   - **target_type** : str
 
   #### *List of methods:*
+
+
+## [*Bunch*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
+  class sklearn.utils.Bunch(**kwargs)[source]¶
+
+  #### *List of parameters:*
+
+  #### *List of attributes:*
+
+  #### *List of methods:*
+  - **clear()** : 
+  - **copy()** : 
+  - **fromkeys(iterable[, value])** : Create a new dictionary with keys from iterable and values set to value.
+  - **get(key[, default])** : Return the value for key if key is in the dictionary, else default.
+  - **items()** : 
+  - **keys()** : 
+  - **pop(key[, default])** : If key is not found, default is returned if given, otherwise KeyError is raised
+  - **popitem(/)** : Remove and return a (key, value) pair as a 2-tuple.
+  - **setdefault(key[, default])** : Insert key with a value of default if key is not in the dictionary.
+  - **update([E, ]\*\*F)** : If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]
+  - **values()** : 
