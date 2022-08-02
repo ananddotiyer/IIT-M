@@ -1,6 +1,6 @@
 
 
-## *DictVectorizer*
+## [*DictVectorizer*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html?highlight=dictvectorizer)
   class sklearn.feature_extraction.DictVectorizer(*, dtype=<class 'numpy.float64'>, separator='=', sparse=True, sort=True)[source]¶
 
   #### *List of parameters:*
@@ -25,7 +25,7 @@
   - **transform(X)** : Transform feature->value dicts to array or sparse matrix.
 
 
-## *FeatureHasher*
+## [*FeatureHasher*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
   class sklearn.feature_extraction.FeatureHasher(n_features=1048576, *, input_type='dict', dtype=<class 'numpy.float64'>, alternate_sign=True)[source]¶
 
   #### *List of parameters:*
@@ -44,7 +44,7 @@
   - **transform(raw_X)** : Transform a sequence of instances to a scipy.sparse matrix.
 
 
-## *TfidfVectorizer*
+## [*TfidfVectorizer*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html?highlight=tfidfvectorizer)
   class sklearn.feature_extraction.text.TfidfVectorizer(*, input='content', encoding='utf-8', decode_error='strict', strip_accents=None, lowercase=True, preprocessor=None, tokenizer=None, analyzer='word', stop_words=None, token_pattern='(?u)\\b\\w\\w+\\b', ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=None, vocabulary=None, binary=False, dtype=<class 'numpy.float64'>, norm='l2', use_idf=True, smooth_idf=True, sublinear_tf=False)[source]¶
 
   #### *List of parameters:*
@@ -91,7 +91,7 @@
   - **transform(raw_documents)** : Transform documents to document-term matrix.
 
 
-## *CountVectorizer*
+## [*CountVectorizer*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
   class sklearn.feature_extraction.text.CountVectorizer(*, input='content', encoding='utf-8', decode_error='strict', strip_accents=None, lowercase=True, preprocessor=None, tokenizer=None, stop_words=None, token_pattern='(?u)\\b\\w\\w+\\b', ngram_range=(1, 1), analyzer='word', max_df=1.0, min_df=1, max_features=None, vocabulary=None, binary=False, dtype=<class 'numpy.int64'>)[source]¶
 
   #### *List of parameters:*
@@ -134,7 +134,7 @@
   - **transform(raw_documents)** : Transform documents to document-term matrix.
 
 
-## *VarianceThreshold*
+## [*VarianceThreshold*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html?highlight=variancethreshold)
   class sklearn.feature_selection.VarianceThreshold(threshold=0.0)[source]¶
 
   #### *List of parameters:*
@@ -156,7 +156,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *SelectKBest*
+## [*SelectKBest*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html?highlight=selectkbest)
   class sklearn.feature_selection.SelectKBest(score_func=<function f_classif>, *, k=10)[source]¶
 
   #### *List of parameters:*
@@ -180,7 +180,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *SelectPercentile*
+## [*SelectPercentile*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html?highlight=selectpercentile)
   class sklearn.feature_selection.SelectPercentile(score_func=<function f_classif>, *, percentile=10)[source]¶
 
   #### *List of parameters:*
@@ -204,7 +204,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *GenericUnivariateSelect*
+## [*GenericUnivariateSelect*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.GenericUnivariateSelect.html?highlight=genericunivariateselect)
   class sklearn.feature_selection.GenericUnivariateSelect(score_func=<function f_classif>, *, mode='percentile', param=1e-05)[source]¶
 
   #### *List of parameters:*
@@ -229,7 +229,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *mutual_info_regression*
+## [*mutual_info_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_regression.html?highlight=mutual_info_regression)
   sklearn.feature_selection.mutual_info_regression(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -239,7 +239,7 @@
   #### *List of methods:*
 
 
-## *mutual_info_classif*
+## [*mutual_info_classif*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.mutual_info_classif.html?highlight=mutual_info_classif)
   sklearn.feature_selection.mutual_info_classif(X, y, *, discrete_features='auto', n_neighbors=3, copy=True, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -249,7 +249,7 @@
   #### *List of methods:*
 
 
-## *RFE*
+## [*RFE*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
   class sklearn.feature_selection.RFE(estimator, *, n_features_to_select=None, step=1, verbose=0, importance_getter='auto')[source]¶
 
   #### *List of parameters:*
@@ -287,7 +287,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *RFECV*
+## [*RFECV*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html)
   class sklearn.feature_selection.RFECV(estimator, *, step=1, min_features_to_select=1, cv=None, scoring=None, verbose=0, n_jobs=None, importance_getter='auto')[source]¶
 
   #### *List of parameters:*
@@ -333,7 +333,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *SelectFromModel*
+## [*SelectFromModel*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html)
   class sklearn.feature_selection.SelectFromModel(estimator, *, threshold=None, prefit=False, norm_order=1, max_features=None, importance_getter='auto')[source]¶
 
   #### *List of parameters:*
@@ -361,7 +361,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *SequentialFeatureSelector*
+## [*SequentialFeatureSelector*](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html)
   class sklearn.feature_selection.SequentialFeatureSelector(estimator, *, n_features_to_select='warn', tol=None, direction='forward', scoring=None, cv=5, n_jobs=None)[source]¶
 
   #### *List of parameters:*
@@ -390,7 +390,7 @@
   - **transform(X)** : Reduce X to the selected features.
 
 
-## *SimpleImputer*
+## [*SimpleImputer*](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html)
   class sklearn.impute.SimpleImputer(*, missing_values=nan, strategy='mean', fill_value=None, verbose='deprecated', copy=True, add_indicator=False)[source]¶
 
   #### *List of parameters:*
@@ -417,7 +417,7 @@
   - **transform(X)** : Impute all missing values in X.
 
 
-## *KNNImputer*
+## [*KNNImputer*](https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html)
   class sklearn.impute.KNNImputer(*, missing_values=nan, n_neighbors=5, weights='uniform', metric='nan_euclidean', copy=True, add_indicator=False)[source]¶
 
   #### *List of parameters:*
@@ -442,7 +442,7 @@
   - **transform(X)** : Impute all missing values in X.
 
 
-## *MissingIndicator*
+## [*MissingIndicator*](https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html)
   class sklearn.impute.MissingIndicator(*, missing_values=nan, features='missing-only', sparse='auto', error_on_new=True)[source]¶
 
   #### *List of parameters:*
@@ -465,7 +465,7 @@
   - **transform(X)** : Generate missing values indicator for X.
 
 
-## *StandardScaler*
+## [*StandardScaler*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
   class sklearn.preprocessing.StandardScaler(*, copy=True, with_mean=True, with_std=True)[source]¶
 
   #### *List of parameters:*
@@ -500,7 +500,7 @@
   - **transform(X[, copy])** : Perform standardization by centering and scaling.
 
 
-## *MinMaxScaler*
+## [*MinMaxScaler*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
   class sklearn.preprocessing.MinMaxScaler(feature_range=(0, 1), *, copy=True, clip=False)[source]¶
 
   #### *List of parameters:*
@@ -529,7 +529,7 @@
   - **transform(X)** : Scale features of X according to feature_range.
 
 
-## *MaxAbsScaler*
+## [*MaxAbsScaler*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html)
   class sklearn.preprocessing.MaxAbsScaler(*, copy=True)[source]¶
 
   #### *List of parameters:*
@@ -553,7 +553,7 @@
   - **transform(X)** : Scale the data.
 
 
-## *FunctionTransformer*
+## [*FunctionTransformer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html)
   class sklearn.preprocessing.FunctionTransformer(func=None, inverse_func=None, *, validate=False, accept_sparse=False, check_inverse=True, feature_names_out=None, kw_args=None, inv_kw_args=None)[source]¶
 
   #### *List of parameters:*
@@ -580,7 +580,7 @@
   - **transform(X)** : Transform X using the forward function.
 
 
-## *PolynomialFeatures*
+## [*PolynomialFeatures*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
   class sklearn.preprocessing.PolynomialFeatures(degree=2, *, interaction_only=False, include_bias=True, order='C')[source]¶
 
   #### *List of parameters:*
@@ -606,7 +606,7 @@
   - **transform(X)** : Transform data to polynomial features.
 
 
-## *KBinsDiscretizer*
+## [*KBinsDiscretizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html)
   class sklearn.preprocessing.KBinsDiscretizer(n_bins=5, *, encode='onehot', strategy='quantile', dtype=None, subsample='warn', random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -633,7 +633,7 @@
   - **transform(X)** : Discretize the data.
 
 
-## *OneHotEncoder*
+## [*OneHotEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
   class sklearn.preprocessing.OneHotEncoder(*, categories='auto', drop=None, sparse=True, dtype=<class 'numpy.float64'>, handle_unknown='error', min_frequency=None, max_categories=None)[source]¶
 
   #### *List of parameters:*
@@ -662,7 +662,7 @@
   - **transform(X)** : Transform X using one-hot encoding.
 
 
-## *LabelEncoder*
+## [*LabelEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
   class sklearn.preprocessing.LabelEncoder[source]¶
 
   #### *List of parameters:*
@@ -678,7 +678,7 @@
   - **transform(y)** : Transform labels to normalized encoding.
 
 
-## *OrdinalEncoder*
+## [*OrdinalEncoder*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html)
   class sklearn.preprocessing.OrdinalEncoder(*, categories='auto', dtype=<class 'numpy.float64'>, handle_unknown='error', unknown_value=None, encoded_missing_value=nan)[source]¶
 
   #### *List of parameters:*
@@ -703,7 +703,7 @@
   - **transform(X)** : Transform X to ordinal codes.
 
 
-## *LabelBinarizer*
+## [*LabelBinarizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html)
   class sklearn.preprocessing.LabelBinarizer(*, neg_label=0, pos_label=1, sparse_output=False)[source]¶
 
   #### *List of parameters:*
@@ -722,7 +722,7 @@
   - **transform(y)** : Transform multi-class labels to binary labels.
 
 
-## *MultiLabelBinarizer*
+## [*MultiLabelBinarizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html)
   class sklearn.preprocessing.MultiLabelBinarizer(*, classes=None, sparse_output=False)[source]¶
 
   #### *List of parameters:*
@@ -738,7 +738,7 @@
   - **transform(y)** : Transform the given label sets.
 
 
-## *add_dummy_feature*
+## [*add_dummy_feature*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.add_dummy_feature.html)
   sklearn.preprocessing.add_dummy_feature(X, value=1.0)[source]¶
 
   #### *List of parameters:*
@@ -748,7 +748,7 @@
   #### *List of methods:*
 
 
-## *Normalizer*
+## [*Normalizer*](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
   class sklearn.preprocessing.Normalizer(norm='l2', *, copy=True)[source]¶
 
   #### *List of parameters:*
@@ -768,7 +768,7 @@
   - **transform(X[, copy])** : Scale each non zero row of X to unit norm.
 
 
-## *ColumnTransformer*
+## [*ColumnTransformer*](https://scikit-learn.org/stable/modules/generated/sklearn.compose.ColumnTransformer.html)
   class sklearn.compose.ColumnTransformer(transformers, *, remainder='drop', sparse_threshold=0.3, n_jobs=None, transformer_weights=None, verbose=False, verbose_feature_names_out=True)[source]¶
 
   #### *List of parameters:*
@@ -796,7 +796,7 @@
   - **transform(X)** : Transform X separately by each transformer, concatenate results.
 
 
-## *TransformedTargetRegressor*
+## [*TransformedTargetRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.compose.TransformedTargetRegressor.html)
   class sklearn.compose.TransformedTargetRegressor(regressor=None, *, transformer=None, func=None, inverse_func=None, check_inverse=True)[source]¶
 
   #### *List of parameters:*
@@ -819,7 +819,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *LinearRegression*
+## [*LinearRegression*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
   class sklearn.linear_model.LinearRegression(*, fit_intercept=True, normalize='deprecated', copy_X=True, n_jobs=None, positive=False)[source]¶
 
   #### *List of parameters:*
@@ -849,7 +849,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *SGDRegressor*
+## [*SGDRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)
   class sklearn.linear_model.SGDRegressor(loss='squared_error', *, penalty='l2', alpha=0.0001, l1_ratio=0.15, fit_intercept=True, max_iter=1000, tol=0.001, shuffle=True, verbose=0, epsilon=0.1, random_state=None, learning_rate='invscaling', eta0=0.01, power_t=0.25, early_stopping=False, validation_fraction=0.1, n_iter_no_change=5, warm_start=False, average=False)[source]¶
 
   #### *List of parameters:*
@@ -892,7 +892,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *Lasso*
+## [*Lasso*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)
   class sklearn.linear_model.Lasso(alpha=1.0, *, fit_intercept=True, normalize='deprecated', precompute=False, copy_X=True, max_iter=1000, tol=0.0001, warm_start=False, positive=False, random_state=None, selection='cyclic')[source]¶
 
   #### *List of parameters:*
@@ -930,7 +930,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *LassoCV*
+## [*LassoCV*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html)
   class sklearn.linear_model.LassoCV(*, eps=0.001, n_alphas=100, alphas=None, fit_intercept=True, normalize='deprecated', precompute='auto', max_iter=1000, tol=0.0001, copy_X=True, cv=None, verbose=False, n_jobs=None, positive=False, random_state=None, selection='cyclic')[source]¶
 
   #### *List of parameters:*
@@ -970,7 +970,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *Ridge*
+## [*Ridge*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
   class sklearn.linear_model.Ridge(alpha=1.0, *, fit_intercept=True, normalize='deprecated', copy_X=True, max_iter=None, tol=0.001, solver='auto', positive=False, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -999,7 +999,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *RidgeCV*
+## [*RidgeCV*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeCV.html)
   class sklearn.linear_model.RidgeCV(alphas=(0.1, 1.0, 10.0), *, fit_intercept=True, normalize='deprecated', scoring=None, cv=None, gcv_mode=None, store_cv_values=False, alpha_per_target=False)[source]¶
 
   #### *List of parameters:*
@@ -1029,7 +1029,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *LogisticRegression*
+## [*LogisticRegression*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
   class sklearn.linear_model.LogisticRegression(penalty='l2', *, dual=False, tol=0.0001, C=1.0, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver='lbfgs', max_iter=100, multi_class='auto', verbose=0, warm_start=False, n_jobs=None, l1_ratio=None)[source]¶
 
   #### *List of parameters:*
@@ -1073,7 +1073,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *LogisticRegressionCV*
+## [*LogisticRegressionCV*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html)
   class sklearn.linear_model.LogisticRegressionCV(*, Cs=10, fit_intercept=True, cv=None, dual=False, penalty='l2', scoring=None, solver='lbfgs', tol=0.0001, max_iter=100, class_weight=None, n_jobs=None, verbose=0, refit=True, intercept_scaling=1.0, multi_class='auto', random_state=None, l1_ratios=None)[source]¶
 
   #### *List of parameters:*
@@ -1122,7 +1122,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *SGDClassifier*
+## [*SGDClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)
   class sklearn.linear_model.SGDClassifier(loss='hinge', *, penalty='l2', alpha=0.0001, l1_ratio=0.15, fit_intercept=True, max_iter=1000, tol=0.001, shuffle=True, verbose=0, epsilon=0.1, n_jobs=None, random_state=None, learning_rate='optimal', eta0=0.0, power_t=0.5, early_stopping=False, validation_fraction=0.1, n_iter_no_change=5, class_weight=None, warm_start=False, average=False)[source]¶
 
   #### *List of parameters:*
@@ -1172,7 +1172,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *RidgeClassifier*
+## [*RidgeClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html)
   class sklearn.linear_model.RidgeClassifier(alpha=1.0, *, fit_intercept=True, normalize='deprecated', copy_X=True, max_iter=None, tol=0.001, class_weight=None, solver='auto', positive=False, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -1207,7 +1207,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *RidgeClassifierCV*
+## [*RidgeClassifierCV*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html)
   class sklearn.linear_model.RidgeClassifierCV(alphas=(0.1, 1.0, 10.0), *, fit_intercept=True, normalize='deprecated', scoring=None, cv=None, class_weight=None, store_cv_values=False)[source]¶
 
   #### *List of parameters:*
@@ -1237,7 +1237,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *Perceptron*
+## [*Perceptron*](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
   class sklearn.linear_model.Perceptron(*, penalty=None, alpha=0.0001, l1_ratio=0.15, fit_intercept=True, max_iter=1000, tol=0.001, shuffle=True, verbose=0, eta0=1.0, n_jobs=None, random_state=0, early_stopping=False, validation_fraction=0.1, n_iter_no_change=5, class_weight=None, warm_start=False)[source]¶
 
   #### *List of parameters:*
@@ -1280,7 +1280,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *SVC*
+## [*SVC*](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
   class sklearn.svm.SVC(*, C=1.0, kernel='rbf', degree=3, gamma='scale', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=- 1, decision_function_shape='ovr', break_ties=False, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -1324,7 +1324,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *LinearSVC*
+## [*LinearSVC*](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
   class sklearn.svm.LinearSVC(penalty='l2', loss='squared_hinge', *, dual=True, tol=0.0001, C=1.0, multi_class='ovr', fit_intercept=True, intercept_scaling=1, class_weight=None, verbose=0, random_state=None, max_iter=1000)[source]¶
 
   #### *List of parameters:*
@@ -1364,7 +1364,7 @@
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
-## *MultinomialNB*
+## [*MultinomialNB*](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
   class sklearn.naive_bayes.MultinomialNB(*, alpha=1.0, fit_prior=True, class_prior=None)[source]¶
 
   #### *List of parameters:*
@@ -1397,7 +1397,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *GaussianNB*
+## [*GaussianNB*](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html)
   class sklearn.naive_bayes.GaussianNB(*, priors=None, var_smoothing=1e-09)[source]¶
 
   #### *List of parameters:*
@@ -1434,7 +1434,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *BernoulliNB*
+## [*BernoulliNB*](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html)
   class sklearn.naive_bayes.BernoulliNB(*, alpha=1.0, binarize=0.0, fit_prior=True, class_prior=None)[source]¶
 
   #### *List of parameters:*
@@ -1468,7 +1468,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *ComplementNB*
+## [*ComplementNB*](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.ComplementNB.html)
   class sklearn.naive_bayes.ComplementNB(*, alpha=1.0, fit_prior=True, class_prior=None, norm=False)[source]¶
 
   #### *List of parameters:*
@@ -1503,7 +1503,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *DecisionTreeClassifier*
+## [*DecisionTreeClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
   class sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, class_weight=None, ccp_alpha=0.0)[source]¶
 
   #### *List of parameters:*
@@ -1548,7 +1548,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *DecisionTreeRegressor*
+## [*DecisionTreeRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
   class sklearn.tree.DecisionTreeRegressor(*, criterion='squared_error', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, ccp_alpha=0.0)[source]¶
 
   #### *List of parameters:*
@@ -1588,7 +1588,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *KNeighborsClassifier*
+## [*KNeighborsClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
   class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, *, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None)[source]¶
 
   #### *List of parameters:*
@@ -1621,7 +1621,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *KMeans*
+## [*KMeans*](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
   class sklearn.cluster.KMeans(n_clusters=8, *, init='k-means++', n_init=10, max_iter=300, tol=0.0001, verbose=0, random_state=None, copy_x=True, algorithm='lloyd')[source]¶
 
   #### *List of parameters:*
@@ -1659,7 +1659,7 @@
   - **transform(X)** : Transform X to a cluster-distance space.
 
 
-## *AgglomerativeClustering*
+## [*AgglomerativeClustering*](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
   class sklearn.cluster.AgglomerativeClustering(n_clusters=2, *, affinity='euclidean', memory=None, connectivity=None, compute_full_tree='auto', linkage='ward', distance_threshold=None, compute_distances=False)[source]¶
 
   #### *List of parameters:*
@@ -1689,7 +1689,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *RandomForestClassifier*
+## [*RandomForestClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
   class sklearn.ensemble.RandomForestClassifier(n_estimators=100, *, criterion='gini', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='sqrt', max_leaf_nodes=None, min_impurity_decrease=0.0, bootstrap=True, oob_score=False, n_jobs=None, random_state=None, verbose=0, warm_start=False, class_weight=None, ccp_alpha=0.0, max_samples=None)[source]¶
 
   #### *List of parameters:*
@@ -1735,7 +1735,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *RandomForestRegressor*
+## [*RandomForestRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
   class sklearn.ensemble.RandomForestRegressor(n_estimators=100, *, criterion='squared_error', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=1.0, max_leaf_nodes=None, min_impurity_decrease=0.0, bootstrap=True, oob_score=False, n_jobs=None, random_state=None, verbose=0, warm_start=False, ccp_alpha=0.0, max_samples=None)[source]¶
 
   #### *List of parameters:*
@@ -1776,7 +1776,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *AdaBoostClassifier*
+## [*AdaBoostClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html)
   class sklearn.ensemble.AdaBoostClassifier(base_estimator=None, *, n_estimators=50, learning_rate=1.0, algorithm='SAMME.R', random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -1811,7 +1811,7 @@
   - **staged_score(X, y[, sample_weight])** : Return staged scores for X, y.
 
 
-## *AdaBoostRegressor*
+## [*AdaBoostRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html)
   class sklearn.ensemble.AdaBoostRegressor(base_estimator=None, *, n_estimators=50, learning_rate=1.0, loss='linear', random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -1839,7 +1839,7 @@
   - **staged_score(X, y[, sample_weight])** : Return staged scores for X, y.
 
 
-## *BaggingClassifier*
+## [*BaggingClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html)
   class sklearn.ensemble.BaggingClassifier(base_estimator=None, n_estimators=10, *, max_samples=1.0, max_features=1.0, bootstrap=True, bootstrap_features=False, oob_score=False, warm_start=False, n_jobs=None, random_state=None, verbose=0)[source]¶
 
   #### *List of parameters:*
@@ -1877,7 +1877,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *BaggingRegressor*
+## [*BaggingRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html)
   class sklearn.ensemble.BaggingRegressor(base_estimator=None, n_estimators=10, *, max_samples=1.0, max_features=1.0, bootstrap=True, bootstrap_features=False, oob_score=False, warm_start=False, n_jobs=None, random_state=None, verbose=0)[source]¶
 
   #### *List of parameters:*
@@ -1910,7 +1910,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *GradientBoostingClassifier*
+## [*GradientBoostingClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
   class sklearn.ensemble.GradientBoostingClassifier(*, loss='log_loss', learning_rate=0.1, n_estimators=100, subsample=1.0, criterion='friedman_mse', min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_depth=3, min_impurity_decrease=0.0, init=None, random_state=None, max_features=None, verbose=0, max_leaf_nodes=None, warm_start=False, validation_fraction=0.1, n_iter_no_change=None, tol=0.0001, ccp_alpha=0.0)[source]¶
 
   #### *List of parameters:*
@@ -1962,7 +1962,7 @@
   - **staged_predict_proba(X)** : Predict class probabilities at each stage for X.
 
 
-## *GradientBoostingRegressor*
+## [*GradientBoostingRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)
   class sklearn.ensemble.GradientBoostingRegressor(*, loss='squared_error', learning_rate=0.1, n_estimators=100, subsample=1.0, criterion='friedman_mse', min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_depth=3, min_impurity_decrease=0.0, init=None, random_state=None, max_features=None, alpha=0.9, verbose=0, max_leaf_nodes=None, warm_start=False, validation_fraction=0.1, n_iter_no_change=None, tol=0.0001, ccp_alpha=0.0)[source]¶
 
   #### *List of parameters:*
@@ -2008,7 +2008,7 @@
   - **staged_predict(X)** : Predict regression target at each stage for X.
 
 
-## *MLPClassifier*
+## [*MLPClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html)
   class sklearn.neural_network.MLPClassifier(hidden_layer_sizes=(100,), activation='relu', *, solver='adam', alpha=0.0001, batch_size='auto', learning_rate='constant', learning_rate_init=0.001, power_t=0.5, max_iter=200, shuffle=True, random_state=None, tol=0.0001, verbose=False, warm_start=False, momentum=0.9, nesterovs_momentum=True, early_stopping=False, validation_fraction=0.1, beta_1=0.9, beta_2=0.999, epsilon=1e-08, n_iter_no_change=10, max_fun=15000)[source]¶
 
   #### *List of parameters:*
@@ -2062,7 +2062,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *DummyRegressor*
+## [*DummyRegressor*](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html)
   class sklearn.dummy.DummyRegressor(*, strategy='mean', constant=None, quantile=None)[source]¶
 
   #### *List of parameters:*
@@ -2086,7 +2086,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *DummyClassifier*
+## [*DummyClassifier*](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
   class sklearn.dummy.DummyClassifier(*, strategy='prior', random_state=None, constant=None)[source]¶
 
   #### *List of parameters:*
@@ -2111,7 +2111,7 @@
   - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
-## *load_iris*
+## [*load_iris*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html)
   sklearn.datasets.load_iris(*, return_X_y=False, as_frame=False)[source]¶
 
   #### *List of parameters:*
@@ -2130,7 +2130,7 @@
   - **Features** : real, positive
 
 
-## *fetch_california_housing*
+## [*fetch_california_housing*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html)
   sklearn.datasets.fetch_california_housing(*, data_home=None, download_if_missing=True, return_X_y=False, as_frame=False)[source]¶
 
   #### *List of parameters:*
@@ -2150,7 +2150,7 @@
   - **Target** : real 0.15 - 5.
 
 
-## *fetch_openml*
+## [*fetch_openml*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_openml.html)
   sklearn.datasets.fetch_openml(name: Optional[str] = None, *, version: Union[str, int] = 'active', data_id: Optional[int] = None, data_home: Optional[str] = None, target_column: Optional[Union[str, List]] = 'default-target', cache: bool = True, return_X_y: bool = False, as_frame: Union[str, bool] = 'auto', n_retries: int = 3, delay: float = 1.0)[source]¶
 
   #### *List of parameters:*
@@ -2172,7 +2172,7 @@
   #### *List of methods:*
 
 
-## *make_regression*
+## [*make_regression*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_regression.html)
   sklearn.datasets.make_regression(n_samples=100, n_features=100, *, n_informative=10, n_targets=1, bias=0.0, effective_rank=None, tail_strength=0.5, noise=0.0, shuffle=True, coef=False, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2182,7 +2182,7 @@
   #### *List of methods:*
 
 
-## *make_blobs*
+## [*make_blobs*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html)
   sklearn.datasets.make_blobs(n_samples=100, n_features=2, *, centers=None, cluster_std=1.0, center_box=(- 10.0, 10.0), shuffle=True, random_state=None, return_centers=False)[source]¶
 
   #### *List of parameters:*
@@ -2203,7 +2203,7 @@
   #### *List of methods:*
 
 
-## *make_classification*
+## [*make_classification*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html)
   sklearn.datasets.make_classification(n_samples=100, n_features=20, *, n_informative=2, n_redundant=2, n_repeated=0, n_classes=2, n_clusters_per_class=2, weights=None, flip_y=0.01, class_sep=1.0, hypercube=True, shift=0.0, scale=1.0, shuffle=True, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2213,7 +2213,7 @@
   #### *List of methods:*
 
 
-## *make_multilabel_classification*
+## [*make_multilabel_classification*](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_multilabel_classification.html)
   sklearn.datasets.make_multilabel_classification(n_samples=100, n_features=20, *, n_classes=5, n_labels=2, length=50, allow_unlabeled=True, sparse=False, return_indicator='dense', return_distributions=False, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2237,7 +2237,7 @@
   #### *List of methods:*
 
 
-## *train_test_split*
+## [*train_test_split*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
   sklearn.model_selection.train_test_split(*arrays, test_size=None, train_size=None, random_state=None, shuffle=True, stratify=None)[source]¶
 
   #### *List of parameters:*
@@ -2254,7 +2254,7 @@
   #### *List of methods:*
 
 
-## *cross_validate*
+## [*cross_validate*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html)
   sklearn.model_selection.cross_validate(estimator, X, y=None, *, groups=None, scoring=None, cv=None, n_jobs=None, verbose=0, fit_params=None, pre_dispatch='2*n_jobs', return_train_score=False, return_estimator=False, error_score=nan)[source]¶
 
   #### *List of parameters:*
@@ -2278,7 +2278,7 @@
   #### *List of methods:*
 
 
-## *cross_val_score*
+## [*cross_val_score*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html)
   sklearn.model_selection.cross_val_score(estimator, X, y=None, *, groups=None, scoring=None, cv=None, n_jobs=None, verbose=0, fit_params=None, pre_dispatch='2*n_jobs', error_score=nan)[source]¶
 
   #### *List of parameters:*
@@ -2300,7 +2300,7 @@
   #### *List of methods:*
 
 
-## *cross_val_predict*
+## [*cross_val_predict*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_predict.html)
   sklearn.model_selection.cross_val_predict(estimator, X, y=None, *, groups=None, cv=None, n_jobs=None, verbose=0, fit_params=None, pre_dispatch='2*n_jobs', method='predict')[source]¶
 
   #### *List of parameters:*
@@ -2321,7 +2321,7 @@
   #### *List of methods:*
 
 
-## *learning_curve*
+## [*learning_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.learning_curve.html)
   sklearn.model_selection.learning_curve(estimator, X, y, *, groups=None, train_sizes=array([0.1, 0.33, 0.55, 0.78, 1.]), cv=None, scoring=None, exploit_incremental_learning=False, n_jobs=None, pre_dispatch='all', verbose=0, shuffle=False, random_state=None, error_score=nan, return_times=False, fit_params=None)[source]¶
 
   #### *List of parameters:*
@@ -2352,7 +2352,7 @@
   #### *List of methods:*
 
 
-## *validation_curve*
+## [*validation_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.validation_curve.html)
   sklearn.model_selection.validation_curve(estimator, X, y, *, param_name, param_range, groups=None, cv=None, scoring=None, n_jobs=None, pre_dispatch='all', verbose=0, error_score=nan, fit_params=None)[source]¶
 
   #### *List of parameters:*
@@ -2377,7 +2377,7 @@
   #### *List of methods:*
 
 
-## *ShuffleSplit*
+## [*ShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html)
   class sklearn.model_selection.ShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2389,7 +2389,7 @@
   - **split(X[, y, groups])** : Generate indices to split data into training and test set.
 
 
-## *StratifiedShuffleSplit*
+## [*StratifiedShuffleSplit*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html)
   class sklearn.model_selection.StratifiedShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2406,7 +2406,7 @@
   - **split(X, y[, groups])** : Generate indices to split data into training and test set.
 
 
-## *permutation_test_score*
+## [*permutation_test_score*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.permutation_test_score.html)
   sklearn.model_selection.permutation_test_score(estimator, X, y, *, groups=None, cv=None, n_permutations=100, n_jobs=None, random_state=0, verbose=0, scoring=None, fit_params=None)[source]¶
 
   #### *List of parameters:*
@@ -2430,7 +2430,7 @@
   #### *List of methods:*
 
 
-## *GridSearchCV*
+## [*GridSearchCV*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)
   class sklearn.model_selection.GridSearchCV(estimator, param_grid, *, scoring=None, n_jobs=None, refit=True, cv=None, verbose=0, pre_dispatch='2*n_jobs', error_score=nan, return_train_score=False)[source]¶
 
   #### *List of parameters:*
@@ -2480,7 +2480,7 @@
   - **transform(X)** : Call transform on the estimator with the best found parameters.
 
 
-## *RandomizedSearchCV*
+## [*RandomizedSearchCV*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
   class sklearn.model_selection.RandomizedSearchCV(estimator, param_distributions, *, n_iter=10, scoring=None, n_jobs=None, refit=True, cv=None, verbose=0, pre_dispatch='2*n_jobs', random_state=None, error_score=nan, return_train_score=False)[source]¶
 
   #### *List of parameters:*
@@ -2531,7 +2531,7 @@
   - **transform(X)** : Call transform on the estimator with the best found parameters.
 
 
-## *mean_squared_error*
+## [*mean_squared_error*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
   sklearn.metrics.mean_squared_error(y_true, y_pred, *, sample_weight=None, multioutput='uniform_average', squared=True)[source]¶
 
   #### *List of parameters:*
@@ -2547,7 +2547,7 @@
   #### *List of methods:*
 
 
-## *mean_absolute_error*
+## [*mean_absolute_error*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html)
   sklearn.metrics.mean_absolute_error(y_true, y_pred, *, sample_weight=None, multioutput='uniform_average')[source]¶
 
   #### *List of parameters:*
@@ -2562,7 +2562,7 @@
   #### *List of methods:*
 
 
-## *mean_absolute_percentage_error*
+## [*mean_absolute_percentage_error*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_percentage_error.html)
   sklearn.metrics.mean_absolute_percentage_error(y_true, y_pred, *, sample_weight=None, multioutput='uniform_average')[source]¶
 
   #### *List of parameters:*
@@ -2577,7 +2577,7 @@
   #### *List of methods:*
 
 
-## *log_loss*
+## [*log_loss*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html)
   sklearn.metrics.log_loss(y_true, y_pred, *, eps=1e-15, normalize=True, sample_weight=None, labels=None)[source]¶
 
   #### *List of parameters:*
@@ -2594,7 +2594,7 @@
   #### *List of methods:*
 
 
-## *hinge_loss*
+## [*hinge_loss*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.hinge_loss.html)
   sklearn.metrics.hinge_loss(y_true, pred_decision, *, labels=None, sample_weight=None)[source]¶
 
   #### *List of parameters:*
@@ -2604,7 +2604,7 @@
   #### *List of methods:*
 
 
-## *confusion_matrix*
+## [*confusion_matrix*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
   sklearn.metrics.confusion_matrix(y_true, y_pred, *, labels=None, sample_weight=None, normalize=None)[source]¶
 
   #### *List of parameters:*
@@ -2620,7 +2620,7 @@
   #### *List of methods:*
 
 
-## *ConfusionMatrixDisplay*
+## [*ConfusionMatrixDisplay*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html)
   class sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix, *, display_labels=None)[source]¶
 
   #### *List of parameters:*
@@ -2670,7 +2670,7 @@
   - **plot(\*[, include_values, cmap, ...])** : Plot visualization.
 
 
-## *precision_score*
+## [*precision_score*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
   sklearn.metrics.precision_score(y_true, y_pred, *, labels=None, pos_label=1, average='binary', sample_weight=None, zero_division='warn')[source]¶
 
   #### *List of parameters:*
@@ -2688,7 +2688,7 @@
   #### *List of methods:*
 
 
-## *recall_score*
+## [*recall_score*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
   sklearn.metrics.recall_score(y_true, y_pred, *, labels=None, pos_label=1, average='binary', sample_weight=None, zero_division='warn')[source]¶
 
   #### *List of parameters:*
@@ -2706,7 +2706,7 @@
   #### *List of methods:*
 
 
-## *silhouette_score*
+## [*silhouette_score*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html)
   sklearn.metrics.silhouette_score(X, labels, *, metric='euclidean', sample_size=None, random_state=None, **kwds)[source]¶
 
   #### *List of parameters:*
@@ -2716,7 +2716,7 @@
   #### *List of methods:*
 
 
-## *make_scorer*
+## [*make_scorer*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html)
   sklearn.metrics.make_scorer(score_func, *, greater_is_better=True, needs_proba=False, needs_threshold=False, **kwargs)[source]¶
 
   #### *List of parameters:*
@@ -2732,7 +2732,7 @@
   #### *List of methods:*
 
 
-## *classification_report*
+## [*classification_report*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
   sklearn.metrics.classification_report(y_true, y_pred, *, labels=None, target_names=None, sample_weight=None, digits=2, output_dict=False, zero_division='warn')[source]¶
 
   #### *List of parameters:*
@@ -2751,7 +2751,7 @@
   #### *List of methods:*
 
 
-## *precision_recall_curve*
+## [*precision_recall_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html)
   sklearn.metrics.precision_recall_curve(y_true, probas_pred, *, pos_label=None, sample_weight=None)[source]¶
 
   #### *List of parameters:*
@@ -2761,7 +2761,7 @@
   #### *List of methods:*
 
 
-## *roc_curve*
+## [*roc_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html)
   sklearn.metrics.roc_curve(y_true, y_score, *, pos_label=None, sample_weight=None, drop_intermediate=True)[source]¶
 
   #### *List of parameters:*
@@ -2779,7 +2779,7 @@
   #### *List of methods:*
 
 
-## *plot_roc_curve*
+## [*plot_roc_curve*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.plot_roc_curve.html)
   sklearn.metrics.plot_roc_curve(estimator, X, y, *, sample_weight=None, drop_intermediate=True, response_method='auto', name=None, ax=None, pos_label=None, **kwargs)[source]¶
 
   #### *List of parameters:*
@@ -2800,7 +2800,7 @@
   #### *List of methods:*
 
 
-## *PCA*
+## [*PCA*](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
   class sklearn.decomposition.PCA(n_components=None, *, copy=True, whiten=False, svd_solver='auto', tol=0.0, iterated_power='auto', n_oversamples=10, power_iteration_normalizer='auto', random_state=None)[source]¶
 
   #### *List of parameters:*
@@ -2841,7 +2841,7 @@
   - **transform(X)** : Apply dimensionality reduction to X.
 
 
-## *make_pipeline*
+## [*make_pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.make_pipeline.html)
   sklearn.pipeline.make_pipeline(*steps, memory=None, verbose=False)[source]¶
 
   #### *List of parameters:*
@@ -2851,7 +2851,7 @@
   #### *List of methods:*
 
 
-## *Pipeline*
+## [*Pipeline*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
   class sklearn.pipeline.Pipeline(steps, *, memory=None, verbose=False)[source]¶
 
   #### *List of parameters:*
@@ -2881,7 +2881,7 @@
   - **transform(X)** : Transform the data, and apply transform with the final estimator.
 
 
-## *FeatureUnion*
+## [*FeatureUnion*](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html)
   class sklearn.pipeline.FeatureUnion(transformer_list, *, n_jobs=None, transformer_weights=None, verbose=False)[source]¶
 
   #### *List of parameters:*
@@ -2902,7 +2902,7 @@
   - **transform(X)** : Transform X separately by each transformer, concatenate results.
 
 
-## *set_config*
+## [*set_config*](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html)
   sklearn.set_config(assume_finite=None, working_memory=None, print_changed_only=None, display=None, pairwise_dist_chunk_size=None, enable_cython_pairwise_dist=None)[source]¶
 
   #### *List of parameters:*
@@ -2918,7 +2918,7 @@
   #### *List of methods:*
 
 
-## *all_estimators*
+## [*all_estimators*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.all_estimators.html)
   sklearn.utils.all_estimators(type_filter=None)[source]¶
 
   #### *List of parameters:*
@@ -2928,7 +2928,7 @@
   #### *List of methods:*
 
 
-## *type_of_target*
+## [*type_of_target*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.type_of_target.html)
   sklearn.utils.multiclass.type_of_target(y, input_name='')[source]¶
 
   #### *List of parameters:*
@@ -2941,7 +2941,7 @@
   #### *List of methods:*
 
 
-## *Bunch*
+## [*Bunch*](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
   class sklearn.utils.Bunch(**kwargs)[source]¶
 
   #### *List of parameters:*
