@@ -21,7 +21,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X[, dict_type])** : Transform array or sparse matrix X back to feature mappings.
   - **restrict(support[, indices])** : Restrict the features to those in support using feature selection.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform feature->value dicts to array or sparse matrix.
 
 
@@ -40,7 +40,7 @@
   - **fit([X, y])** : No-op.
   - **fit_transform(X[, y])** : Fit to data, then transform it.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(raw_X)** : Transform a sequence of instances to a scipy.sparse matrix.
 
 
@@ -87,7 +87,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_stop_words()** : Build or fetch the effective stop words list.
   - **inverse_transform(X)** : Return terms per document with nonzero entries in X.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(raw_documents)** : Transform documents to document-term matrix.
 
 
@@ -130,7 +130,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_stop_words()** : Build or fetch the effective stop words list.
   - **inverse_transform(X)** : Return terms per document with nonzero entries in X.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(raw_documents)** : Transform documents to document-term matrix.
 
 
@@ -152,7 +152,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -176,7 +176,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -200,7 +200,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -225,7 +225,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -273,7 +273,7 @@
 
   #### *List of methods:*
   - **decision_function(X)** : Compute the decision function of X.
-  - **fit(X, y, **fit_params)** : Fit the RFE model and then the underlying estimator on the selected features.
+  - **fit(X, y, \*\*fit_params)** : Fit the RFE model and then the underlying estimator on the selected features.
   - **fit_transform(X[, y])** : Fit to data, then transform it.
   - **get_feature_names_out([input_features])** : Mask feature names according to selected features.
   - **get_params([deep])** : Get parameters for this estimator.
@@ -282,8 +282,8 @@
   - **predict(X)** : Reduce X to the selected features and then predict using the underlying estimator.
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
-  - **score(X, y, **fit_params)** : Reduce X to the selected features and return the score of the underlying estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **score(X, y, \*\*fit_params)** : Reduce X to the selected features and return the score of the underlying estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -328,8 +328,8 @@
   - **predict(X)** : Reduce X to the selected features and then predict using the underlying estimator.
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
-  - **score(X, y, **fit_params)** : Reduce X to the selected features and return the score of the underlying estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **score(X, y, \*\*fit_params)** : Reduce X to the selected features and return the score of the underlying estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -357,7 +357,7 @@
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
   - **partial_fit(X[, y])** : Fit the SelectFromModel meta-transformer only once.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -386,7 +386,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **get_support([indices])** : Get a mask, or integer index, of the features selected.
   - **inverse_transform(X)** : Reverse the transformation operation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Reduce X to the selected features.
 
 
@@ -413,7 +413,7 @@
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Convert the data back to the original representation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Impute all missing values in X.
 
 
@@ -438,7 +438,7 @@
   - **fit_transform(X[, y])** : Fit to data, then transform it.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Impute all missing values in X.
 
 
@@ -461,7 +461,7 @@
   - **fit_transform(X[, y])** : Generate missing values indicator for X.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Generate missing values indicator for X.
 
 
@@ -496,7 +496,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X[, copy])** : Scale back the data to the original representation.
   - **partial_fit(X[, y, sample_weight])** : Online computation of mean and std on X for later scaling.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X[, copy])** : Perform standardization by centering and scaling.
 
 
@@ -525,7 +525,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Undo the scaling of X according to feature_range.
   - **partial_fit(X[, y])** : Online computation of min and max on X for later scaling.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Scale features of X according to feature_range.
 
 
@@ -549,7 +549,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Scale back the data to the original representation.
   - **partial_fit(X[, y])** : Online computation of max absolute value of X for later scaling.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Scale the data.
 
 
@@ -576,7 +576,7 @@
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Transform X using the inverse function.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X using the forward function.
 
 
@@ -602,7 +602,7 @@
   - **get_feature_names([input_features])** : DEPRECATED: get_feature_names is deprecated in 1.0 and will be removed in 1.2.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform data to polynomial features.
 
 
@@ -629,7 +629,7 @@
   - **get_feature_names_out([input_features])** : Get output feature names.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(Xt)** : Transform discretized data back to original feature space.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Discretize the data.
 
 
@@ -658,7 +658,7 @@
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Convert the data back to the original representation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X using one-hot encoding.
 
 
@@ -674,7 +674,7 @@
   - **fit_transform(y)** : Fit label encoder and return encoded labels.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(y)** : Transform labels back to original encoding.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(y)** : Transform labels to normalized encoding.
 
 
@@ -699,7 +699,7 @@
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(X)** : Convert the data back to the original representation.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X to ordinal codes.
 
 
@@ -718,7 +718,7 @@
   - **fit_transform(y)** : Fit label binarizer/transform multi-class labels to binary labels.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(Y[, threshold])** : Transform binary labels back to multi-class labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(y)** : Transform multi-class labels to binary labels.
 
 
@@ -734,7 +734,7 @@
   - **fit_transform(y)** : Fit the label sets binarizer and transform the given label sets.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(yt)** : Transform the given indicator matrix into label sets.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(y)** : Transform the given label sets.
 
 
@@ -764,7 +764,7 @@
   - **fit_transform(X[, y])** : Fit to data, then transform it.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X[, copy])** : Scale each non zero row of X to unit norm.
 
 
@@ -792,7 +792,7 @@
   - **get_feature_names()** : DEPRECATED: get_feature_names is deprecated in 1.0 and will be removed in 1.2.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**kwargs)** : Set the parameters of this estimator.
+  - **set_params(\*\*kwargs)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X separately by each transformer, concatenate results.
 
 
@@ -812,11 +812,11 @@
   - **feature_names_in_** : int
 
   #### *List of methods:*
-  - **fit(X, y, **fit_params)** : Fit the model according to the given training data.
+  - **fit(X, y, \*\*fit_params)** : Fit the model according to the given training data.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **predict(X, **predict_params)** : Predict using the base regressor, applying inverse.
+  - **predict(X, \*\*predict_params)** : Predict using the base regressor, applying inverse.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *LinearRegression*
@@ -846,7 +846,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *SGDRegressor*
@@ -888,7 +888,7 @@
   - **partial_fit(X, y[, sample_weight])** : Perform one epoch of stochastic gradient descent on given samples.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -924,10 +924,10 @@
   #### *List of methods:*
   - **fit(X, y[, sample_weight, check_input])** : Fit model with coordinate descent.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **path(X, y, *[, l1_ratio, eps, n_alphas, ...])** : Compute elastic net path with coordinate descent.
+  - **path(X, y, \*[, l1_ratio, eps, n_alphas, ...])** : Compute elastic net path with coordinate descent.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *LassoCV*
@@ -964,10 +964,10 @@
   #### *List of methods:*
   - **fit(X, y[, sample_weight])** : Fit linear model with coordinate descent.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **path(X, y, *[, eps, n_alphas, alphas, ...])** : Compute Lasso path with coordinate descent.
+  - **path(X, y, \*[, eps, n_alphas, alphas, ...])** : Compute Lasso path with coordinate descent.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *Ridge*
@@ -996,7 +996,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *RidgeCV*
@@ -1026,7 +1026,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict using the linear model.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *LogisticRegression*
@@ -1069,7 +1069,7 @@
   - **predict_log_proba(X)** : Predict logarithm of probability estimates.
   - **predict_proba(X)** : Probability estimates.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -1118,7 +1118,7 @@
   - **predict_log_proba(X)** : Predict logarithm of probability estimates.
   - **predict_proba(X)** : Probability estimates.
   - **score(X, y[, sample_weight])** : Score using the scoring option on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -1168,7 +1168,7 @@
   - **predict_log_proba(X)** : Log of probability estimates.
   - **predict_proba(X)** : Probability estimates.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -1204,7 +1204,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict class labels for samples in X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *RidgeClassifierCV*
@@ -1234,7 +1234,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict class labels for samples in X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *Perceptron*
@@ -1276,7 +1276,7 @@
   - **partial_fit(X, y[, classes, sample_weight])** : Perform one epoch of stochastic gradient descent on given samples.
   - **predict(X)** : Predict class labels for samples in X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -1321,7 +1321,7 @@
   - **predict_log_proba(X)** : Compute log probabilities of possible outcomes for samples in X.
   - **predict_proba(X)** : Compute probabilities of possible outcomes for samples in X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *LinearSVC*
@@ -1360,7 +1360,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict class labels for samples in X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **sparsify()** : Convert coefficient matrix to sparse format.
 
 
@@ -1394,7 +1394,7 @@
   - **predict_log_proba(X)** : Return log-probability estimates for the test vector X.
   - **predict_proba(X)** : Return probability estimates for the test vector X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *GaussianNB*
@@ -1431,7 +1431,7 @@
   - **predict_log_proba(X)** : Return log-probability estimates for the test vector X.
   - **predict_proba(X)** : Return probability estimates for the test vector X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *BernoulliNB*
@@ -1465,7 +1465,7 @@
   - **predict_log_proba(X)** : Return log-probability estimates for the test vector X.
   - **predict_proba(X)** : Return probability estimates for the test vector X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *ComplementNB*
@@ -1500,7 +1500,7 @@
   - **predict_log_proba(X)** : Return log-probability estimates for the test vector X.
   - **predict_proba(X)** : Return probability estimates for the test vector X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *DecisionTreeClassifier*
@@ -1545,7 +1545,7 @@
   - **predict_log_proba(X)** : Predict class log-probabilities of the input samples X.
   - **predict_proba(X[, check_input])** : Predict class probabilities of the input samples X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *DecisionTreeRegressor*
@@ -1585,7 +1585,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X[, check_input])** : Predict class or regression value for X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *KNeighborsClassifier*
@@ -1618,7 +1618,7 @@
   - **predict(X)** : Predict the class labels for the provided data.
   - **predict_proba(X)** : Return probability estimates for the test data X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *KMeans*
@@ -1655,7 +1655,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X[, sample_weight])** : Predict the closest cluster each sample in X belongs to.
   - **score(X[, y, sample_weight])** : Opposite of the value of X on the K-means objective.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X to a cluster-distance space.
 
 
@@ -1686,7 +1686,7 @@
   - **fit(X[, y])** : Fit the hierarchical clustering from features, or distance matrix.
   - **fit_predict(X[, y])** : Fit and return the result of each sample's clustering assignment.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *RandomForestClassifier*
@@ -1732,7 +1732,7 @@
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *RandomForestRegressor*
@@ -1773,7 +1773,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict regression target for X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *AdaBoostClassifier*
@@ -1804,7 +1804,7 @@
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **staged_decision_function(X)** : Compute decision function of X for each boosting iteration.
   - **staged_predict(X)** : Return staged predictions for X.
   - **staged_predict_proba(X)** : Predict class probabilities for X.
@@ -1834,7 +1834,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict regression value for X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **staged_predict(X)** : Return staged predictions for X.
   - **staged_score(X, y[, sample_weight])** : Return staged scores for X, y.
 
@@ -1874,7 +1874,7 @@
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *BaggingRegressor*
@@ -1907,7 +1907,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict regression target for X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *GradientBoostingClassifier*
@@ -1956,7 +1956,7 @@
   - **predict_log_proba(X)** : Predict class log-probabilities for X.
   - **predict_proba(X)** : Predict class probabilities for X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **staged_decision_function(X)** : Compute decision function of X for each iteration.
   - **staged_predict(X)** : Predict class at each stage for X.
   - **staged_predict_proba(X)** : Predict class probabilities at each stage for X.
@@ -2004,7 +2004,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X)** : Predict regression target for X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **staged_predict(X)** : Predict regression target at each stage for X.
 
 
@@ -2059,7 +2059,7 @@
   - **predict_log_proba(X)** : Return the log of probability estimates.
   - **predict_proba(X)** : Probability estimates.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *DummyRegressor*
@@ -2083,7 +2083,7 @@
   - **get_params([deep])** : Get parameters for this estimator.
   - **predict(X[, return_std])** : Perform classification on test vectors X.
   - **score(X, y[, sample_weight])** : Return the coefficient of determination R^2 of the prediction.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *DummyClassifier*
@@ -2108,7 +2108,7 @@
   - **predict_log_proba(X)** : Return log probability estimates for the test vectors X.
   - **predict_proba(X)** : Return probability estimates for the test vectors X.
   - **score(X, y[, sample_weight])** : Return the mean accuracy on the given test data and labels.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
 
 
 ## *load_iris*
@@ -2476,7 +2476,7 @@
   - **predict_proba(X)** : Call predict_proba on the estimator with the best found parameters.
   - **score(X[, y])** : Return the score on the given data, if the estimator has been refit.
   - **score_samples(X)** : Call score_samples on the estimator with the best found parameters.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Call transform on the estimator with the best found parameters.
 
 
@@ -2527,7 +2527,7 @@
   - **predict_proba(X)** : Call predict_proba on the estimator with the best found parameters.
   - **score(X[, y])** : Return the score on the given data, if the estimator has been refit.
   - **score_samples(X)** : Call score_samples on the estimator with the best found parameters.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Call transform on the estimator with the best found parameters.
 
 
@@ -2665,9 +2665,9 @@
   - **display** : ConfusionMatrixDisplay
 
   #### *List of methods:*
-  - **from_estimator(estimator, X, y, *[, labels, ...])** : Plot Confusion Matrix given an estimator and some data.
-  - **from_predictions(y_true, y_pred, *[, ...])** : Plot Confusion Matrix given true and predicted labels.
-  - **plot(*[, include_values, cmap, ...])** : Plot visualization.
+  - **from_estimator(estimator, X, y, \*[, labels, ...])** : Plot Confusion Matrix given an estimator and some data.
+  - **from_predictions(y_true, y_pred, \*[, ...])** : Plot Confusion Matrix given true and predicted labels.
+  - **plot(\*[, include_values, cmap, ...])** : Plot visualization.
 
 
 ## *precision_score*
@@ -2837,7 +2837,7 @@
   - **inverse_transform(X)** : Transform data back to its original space.
   - **score(X[, y])** : Return the average log-likelihood of all samples.
   - **score_samples(X)** : Return the log-likelihood of each sample.
-  - **set_params(**params)** : Set the parameters of this estimator.
+  - **set_params(\*\*params)** : Set the parameters of this estimator.
   - **transform(X)** : Apply dimensionality reduction to X.
 
 
@@ -2872,12 +2872,12 @@
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
   - **inverse_transform(Xt)** : Apply inverse_transform for each step in a reverse order.
-  - **predict(X, **predict_params)** : Transform the data, and apply predict with the final estimator.
-  - **predict_log_proba(X, **predict_log_proba_params)** : Transform the data, and apply predict_log_proba with the final estimator.
-  - **predict_proba(X, **predict_proba_params)** : Transform the data, and apply predict_proba with the final estimator.
+  - **predict(X, \*\*predict_params)** : Transform the data, and apply predict with the final estimator.
+  - **predict_log_proba(X, \*\*predict_log_proba_params)** : Transform the data, and apply predict_log_proba with the final estimator.
+  - **predict_proba(X, \*\*predict_proba_params)** : Transform the data, and apply predict_proba with the final estimator.
   - **score(X[, y, sample_weight])** : Transform the data, and apply score with the final estimator.
   - **score_samples(X)** : Transform the data, and apply score_samples with the final estimator.
-  - **set_params(**kwargs)** : Set the parameters of this estimator.
+  - **set_params(\*\*kwargs)** : Set the parameters of this estimator.
   - **transform(X)** : Transform the data, and apply transform with the final estimator.
 
 
@@ -2898,7 +2898,7 @@
   - **get_feature_names()** : DEPRECATED: get_feature_names is deprecated in 1.0 and will be removed in 1.2.
   - **get_feature_names_out([input_features])** : Get output feature names for transformation.
   - **get_params([deep])** : Get parameters for this estimator.
-  - **set_params(**kwargs)** : Set the parameters of this estimator.
+  - **set_params(\*\*kwargs)** : Set the parameters of this estimator.
   - **transform(X)** : Transform X separately by each transformer, concatenate results.
 
 
@@ -2958,5 +2958,5 @@
   - **pop(key[, default])** : If key is not found, default is returned if given, otherwise KeyError is raised
   - **popitem(/)** : Remove and return a (key, value) pair as a 2-tuple.
   - **setdefault(key[, default])** : Insert key with a value of default if key is not in the dictionary.
-  - **update([E, ]**F)** : If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]
+  - **update([E, ]\*\*F)** : If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]
   - **values()** : 
