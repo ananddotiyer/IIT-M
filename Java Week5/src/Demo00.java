@@ -15,7 +15,7 @@ class Manager extends Employee {
 
     }
 }
-public class Demo2 {
+public class Demo00 {
     public static void main(String[] args) {
         Object mgr = new Manager();    
         Employee emp = new Manager();
