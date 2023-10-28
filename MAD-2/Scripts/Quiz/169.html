@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>    
+    <style>
+        .light {
+            background-color: lightblue;
+        }
+        .red-light {
+            background-color: red;
+        }
+        .green-light {
+            background-color: green;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="light" :class="{'red-light': isRed, 'green-light': !isRed}">What color?</div>
+        <br>
+        <button @click="peopleCount++">New person</button>
+    </div>
+</body>
+<script src="169.js"></script>
+</html>

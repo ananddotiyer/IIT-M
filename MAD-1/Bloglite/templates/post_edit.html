@@ -1,0 +1,87 @@
+<!-- (post.post_id, post_user.user_id, post_user.name, post.title, post.description, post.image_url, post.image_full_url, post_date, post_like) -->
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    {% if can_edit %}
+      <h2 class="display-6"> Edit Post </h2>
+    {% endif %}
+    
+    <form action="/post/edit/{{ post[0] }}" method="POST" id="edit-post-form" enctype="multipart/form-data">
+      <div>
+        {% if post[5] != '' %}
+          <img src="{{ post[6] }}" alt="{{ post[5] }} " width="300" height="200">
+        {% endif %}
+        {% if can_edit %}
+          <input type="file" name="file" />
+        {% endif %}
+      </div>
+      <div>
+        <label>Posted by: <a href="/profile/{{ post[1] }}"> {{ post[2] }} </a> &nbsp on {{ post[7] }} </label>
+      </div>
+      <br>
+      <div>
+        {% if can_edit %}
+        <label>Title</label>
+          <br/>
+          <input type="text" name="title" value="{{ post[3] }}" size="50" required />
+        {% else %}
+          <h4 class="display-6"> {{ post[3] }} </h4>
+        {% endif %}
+      </div>
+      <div>
+        {% if can_edit %}
+          <br/>
+          <label>Contents</label>
+          <br/>
+          <textarea name="description" rows="10" cols="100">{{ post[4] }}</textarea>
+        {% else %}
+            {% for paragraph in post[4] %}
+              <p>{{paragraph}}</p>
+            {% endfor %}
+        {% endif %}
+      </div>
+      <br>
+      {% if post[8] %}
+        <a href="/post/{{ post[0] }}/like?like=0" >Unlike this post</a>
+      {% else %}
+        <a href="/post/{{ post[0] }}/like?like=1" >Like this post</a>
+      {% endif %}
+      <br/>
+      <div>
+        {% if can_edit %}
+          <input type="submit" name="Update" value="Update">
+          <input type="submit" name="Delete" value="Delete" onclick="return confirm('Are you sure you wish to delete?');">
+        {% endif %}
+      </div>
+      {% if post_flag %}
+        <p> Post updated! </p>
+      {% endif %}
+      <br/>
+
+      <!-- Show all comments for this post -->
+      <div>
+        <h5><u>Comments</u></h5>
+        {% for comment in comments %}
+          <h6><a href="/profile/{{ comment[0] }}"> {{comment[1]}} </a></h6>
+          
+          {% for paragraph in comment[2] %}
+            &nbsp;&nbsp;{{paragraph}}<br/>
+          {% endfor %}
+
+        {% endfor %}
+      </div>
+      <br/>
+      <br/>
+      <div>
+        <label>Add your comment about the post below</label>
+        </br>
+        <textarea name="comment" rows="7" cols="100"></textarea>
+      </div>
+      <input type="submit" name="add_comment" value="Add comments">
+      {% if comment_flag %}
+      <p> Comment added! </p>
+    {% endif %}
+    </form>
+  </div>
+{% endblock %}

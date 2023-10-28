@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2> Add Post </h2>
+    <form action="/post/create/" method="POST" id="create-form" enctype = "multipart/form-data">
+      {{ form.hidden_tag() }}
+      <div class="container">
+        <div class="row">
+          {{ form.title.label }}
+          {{ form.title(size=50) }}
+        </div>
+        <br/>
+        <div class="row">
+          {{ form.description.label }}
+          {{ form.description(rows=10, cols=100) }}
+          <!-- <label>Description </label>
+          <textarea name="description" rows="10" cols="100" required></textarea> -->
+        </div>
+        <div class="row">
+          <label>Upload picture</label>
+          <input type="file" name="file" />
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <div> {{ form.submit() }} </div>
+    </form>
+    {% if flag %}
+      <p> Post added! </p>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<script>
+    // Function without async keyword that returns a Promise
+    function myPromiseFunction() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise resolved");
+            }, 1000);
+        });
+    }
+
+    function regularFunction(result) {
+        return `I am a regular function!  Previous result is ${result}`
+    }
+    // Async function that calls the promise function
+    async function myAsyncFunction() {
+        const result = await myPromiseFunction();
+        console.log(regularFunction(result))
+    }
+
+    myAsyncFunction(); // This will log "Promise resolved" after 1 second
+    console.log(regularFunction("Cooking up a result..."))
+</script>

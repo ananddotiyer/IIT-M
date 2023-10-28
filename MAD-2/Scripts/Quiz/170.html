@@ -1,0 +1,21 @@
+<script>
+    async function result(x) {
+        const y = 3;
+        return new Promise((reject, resolve) => {
+            if (((x * 15) / (x * 5) - 2) == 1)
+                reject(y ** 2)
+            console.log("Inside Promise")
+            resolve(y ** 3)
+        })
+    }
+    result(5).then(
+        rej => console.log("Promise rejected with the value", rej),
+        res => console.log("Promise resolved with the value", res)
+    ).then(data => {
+        console.log("Data received is", data);
+        return "5"
+    }).finally(data => {
+        console.log("Data received is", data)
+        return "15"
+    }).then(data => console.log("Data received is", data))
+</script>

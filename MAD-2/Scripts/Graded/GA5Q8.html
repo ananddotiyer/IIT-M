@@ -1,0 +1,19 @@
+<script>
+    function promiseGenerator(s) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(`Will resolve after ${s} seconds`)
+            }, s * 1000)
+        })
+    }
+
+    async function asyncFunc() {
+        console.log('INitial')
+        let Prom1Val = await promiseGenerator(2)
+        console.log(Prom1Val)
+        let Prom2Val = await promiseGenerator(3)
+        console.log(Prom2Val)
+    }
+
+    asyncFunc()
+</script>

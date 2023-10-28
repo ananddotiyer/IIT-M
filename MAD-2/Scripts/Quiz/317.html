@@ -1,0 +1,20 @@
+<script>
+    const promiseFactory = (data) => {
+        return new Promise((resolve) => {
+            resolve(data)
+        })
+    }
+
+    result = []
+    p1 = promiseFactory('App Dev1')
+    p1.then((data) => {
+        result.push(data)
+        return promiseFactory('App Dev2')
+    }).then((data) => {
+        result.push(data)
+        //this will print array with App Dev1 and App Dev2, after promise resolves.
+        console.log(result) 
+    })
+
+    console.log(result) //this will print empty array
+</script>

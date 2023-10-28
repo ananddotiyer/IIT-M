@@ -1,0 +1,18 @@
+<script>
+    var x = 20
+    const y = {
+        x: 40,
+        func: function(x) {
+            console.log("Values is ", x)
+        }
+    }
+
+    const z = {
+        x: 40,
+        func: () => {
+            console.log("Value is ", x)
+            y.func.call(this)
+        }
+    }
+    z.func.apply(y)
+</script>

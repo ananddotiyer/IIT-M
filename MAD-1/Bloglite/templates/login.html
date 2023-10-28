@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2> Login </h2>
+    <form action="/login" method="POST" id="login-form" enctype = "multipart/form-data">
+        {{ form.hidden_tag() }}
+        <input type="hidden" name="next_page" value={{next_page}}>
+      <div class="row">
+        {{ form.username.label }}<br>
+        {{ form.username(size=30) }}
+      </div>
+      <br/>
+      <div class="row">
+        {{ form.password.label }}
+        {{ form.password(size=12) }}
+      </div>
+      <br/>
+      <div> {{ form.submit() }} {{ form.signup() }} </div>
+    </form>
+  </div>
+{% endblock %}

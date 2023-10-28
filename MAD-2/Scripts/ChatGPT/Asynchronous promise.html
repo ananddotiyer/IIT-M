@@ -1,0 +1,23 @@
+<script>
+    const myPromise = new Promise((resolve, reject) => {
+        console.log("Promise started");
+        setTimeout(() => {
+            resolve("Promise resolved");
+        }, 1000);
+    });
+
+    console.log("After promise creation");
+
+    myPromise.then(result => {
+        console.log(result);
+    });
+
+    console.log("After promise then");
+
+// Output:
+// Promise started
+// After promise creation
+// After promise then
+// Promise resolved
+
+</script>

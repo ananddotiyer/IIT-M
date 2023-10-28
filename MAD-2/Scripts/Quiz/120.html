@@ -1,0 +1,17 @@
+<script>
+    const a = {
+        'x1': 10,
+        func1: function() {
+            console.log(this.x1)
+        }
+    }
+    const b = {
+        'x1': 20,
+        func2: function() {
+            let c = a.func1
+            c.call() //undefined.
+            c.call(a) //10
+        }
+    }
+    b.func2()
+</script>

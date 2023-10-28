@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="display-5"> {{ user[1] }}'s Profile </h2> 
+    <h4 class="display-8"> Total posts: {{ user[4]}},   Follows: {{ user[2] }},    Followed by: {{ user[3] }} </h4> 
+    <img src="{{ pp_url }}" alt="{{ pp_url }}" width="300" height="200">
+
+    <br/>
+    <br/>
+    {% if flag %}
+      <table class="table table-striped" id = "all-posts" border=2>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+          {% for post in posts %}
+        <tr scope="row">
+          {% if post['image_url'] != '' %}
+            <td> <img src="{{ post['image_url'] }}" alt="{{ post['image_url'] }}" width="200" height="100"> </td>
+          {% else %}
+            <td></td>
+          {% endif %}
+          <td><a href="/post/edit/{{ post['post_id'] }}"> {{post['title'] }} </a></td>
+          <td> {{ post['description'] }} </td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      {% if can_add_post %}
+        <p> No posts found. Add posts now! </p>
+      {% endif %}  
+    {% endif %}
+
+    <br/>
+    <form action="/profile/{{user[0]}}" method="POST" id="create-form" enctype = "multipart/form-data">
+      {% if can_add_post %}
+        <input type="submit" value="Add Post">
+      {% endif %}
+    </form>
+  </div>
+{% endblock %}

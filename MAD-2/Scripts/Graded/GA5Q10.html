@@ -1,0 +1,13 @@
+<script>
+    async function func1() {
+        new Promise(rej => setTimeout(rej, 4000));
+
+        async function func2() {
+            await new Promise(rej => setTimeout(rej, 2000));
+
+            console.log("Finished")
+        }
+        func2();
+    }
+    func1();
+</script>

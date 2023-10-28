@@ -1,0 +1,19 @@
+<script>
+    var name = "Anand"
+    const obj = {
+        name: 'Abhishek',
+        arrowFunction: () => {
+            console.log(this.name)
+        },
+        normalFunction: function() {
+            this.arrowFunction = () => {
+                console.log(this.name)
+            }
+        }
+    }
+    obj.arrowFunction()
+    obj.normalFunction()
+    obj.arrowFunction()
+</script>
+
+<!-- https://discourse.onlinedegree.iitm.ac.in/t/does-the-behavior-of-arrowfunction-differ-when-its-defined-as-compared-to-when-its-assigned/84041 -->

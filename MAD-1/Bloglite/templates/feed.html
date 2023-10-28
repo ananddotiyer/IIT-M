@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <div>
+      <h2>{{current_user['name']}}, here is your feed</h2>
+    </div>
+    <br/>
+    <br/>
+    <table class="table table-striped" id = "feed" border=2>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Author</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Posted on</th>
+        </tr>
+      </thead>
+      {% for post in posts %}
+      <tr scope="row">
+        <td width="100"> <a href="/profile/{{ post[0] }}">{{ post[1] }}</a> </td>
+        <td width="300"><a href="/post/edit/{{ post[2] }}"> {{post[3] }} </a></td>
+        <td width="600"> {{ post[4] }} </td>
+        <td> {{ post[5] }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

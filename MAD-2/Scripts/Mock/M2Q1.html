@@ -1,0 +1,15 @@
+<script>
+    //The following script will resolve immediately, and not wait for 2s.
+    //To fix this, the setTimeout call should be changed to 
+    //setTimeout(()=>res("Statement1"), 2000)
+    p = new Promise((res,rej) => {
+        setTimeout(res("Statement1"), 2000)
+    }).then(r => {
+        console.log("Statement2")
+        return r
+    }).then(r => console.log(r)
+    ).then(r => console.log(r)
+    ).catch(e => console.log("Error"))
+</script>
+
+  

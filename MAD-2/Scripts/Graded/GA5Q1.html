@@ -1,0 +1,13 @@
+<script>
+    const a = fetch("https://httpbin.org/get")
+    a.then(r => {
+        if (!r.ok) {
+            throw new Error("HTTP Status code: " + r.status)
+        }
+        return r.json()
+    }).then(d => {
+        console.log("Got the data!!");
+    }).catch(e => {
+        console.log(e)
+    })
+</script>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2> Search and Follow Users </h2>
+    <form action="/search_users/{{term}}" method="POST" id="search_users">
+        <input type="text" name="search" size="25" />
+      <input type="submit" name="Search" value="Search">
+      <br/>
+      <br/>
+      <table id = "all-users">
+        <tr>
+          <td width="200">User</td>
+          <td>Follow</td>
+        </tr>
+          {% for user in final_data[1] %}
+          <tr>
+          <td width="200"> <a href="/profile/{{ user }}"> {{ final_data[1][user] }} </a> </td>
+          <td><input type="checkbox" id="{{ user }}" name="{{ user }}" value="1" checked> </td>
+          </tr>
+          {% endfor %}
+          {% for user in final_data[0] %}
+          <tr>
+              <td width="200"> <a href="/profile/{{ user }}"> {{ final_data[0][user] }} </a> </td>
+              <td><input type="checkbox" id="{{ user }}" name="{{ user }}" value="1" unchecked> </td>
+              </tr>
+          {% endfor %}
+      </table>
+      <br>
+      <br>
+      <div>
+        <input type="submit" name="Update" value="Update">
+      </div>
+    </form>
+  </div>
+{% endblock %}

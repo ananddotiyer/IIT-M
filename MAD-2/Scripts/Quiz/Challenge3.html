@@ -1,0 +1,14 @@
+<script>
+    async function abc() {
+        console.log("A")
+        new Promise(res => {
+            console.log("B")
+            res("C")
+        }).then(d => console.log(d))
+        console.log("D")
+        return "E";
+    }
+
+    abc().then(d => console.log(d))
+    console.log("F")    
+</script>

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2> Sign Up </h2>
+    <form action="/user/create" method="POST" id="create-form" enctype = "multipart/form-data">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        {{ form.username.label }}<br>
+        {{ form.username(size=30) }}
+        <!-- {% for error in form.username.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+        {% endfor %} -->
+      </div>
+      <br/>
+      <div class="row">
+        {{ form.password.label }}
+        {{ form.password(size=12) }}
+      </div>
+      <br/>
+      <div class="row">
+        <label>Upload Profile picture: </label>
+        <input type="file" name="file" />
+      </div>
+      <br/>
+      <div> {{ form.submit() }} </div>
+    </form>
+    {% if flag %}
+      <p> User added! </p>
+    {% endif %}
+  </div>
+{% endblock %}

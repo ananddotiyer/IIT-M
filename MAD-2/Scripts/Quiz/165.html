@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <section id="section-one" style="color: red">
+            Hello from section 1
+        </section>
+    </div>
+    <script>
+        const sec1 = document.querySelector('#section-one')
+        const sec2 = document.createElement('section')
+        sec2.innerHTML = "Hello from section 2"
+        sec1.parentNode.appendChild(sec2)
+    </script>
+</body>
+</html>

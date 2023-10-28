@@ -1,0 +1,16 @@
+<script>
+    //let will not create a global variable x, 
+    //without which "this.x" inside "func" will give undefined.
+    //In this case, the output is 5 and 10.
+    //var instead of let will define the global variable.
+    //In this case, the output is 20 and 10.
+    let x = 5
+    let obj = {
+        'x': 10,
+        func: (x) => {
+            this.x = x
+        }
+    }
+    obj.func(20)
+    console.log(x, "and", obj.x)
+</script>

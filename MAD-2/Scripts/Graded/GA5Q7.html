@@ -1,0 +1,22 @@
+<script>
+    let x = 2, n = 3, k = 4
+
+    const Promise1 = new Promise((resolved, rejected) => {
+        if (k < n) {
+            resolved(x)
+        } else {
+            rejected('Bad promise')
+        }
+    })
+    const Promise2 = Promise1.then((x) => {
+        return x * x
+    })
+
+    Promise2
+    .then((x) => {
+        console.log(x)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+</script>

@@ -1,0 +1,14 @@
+<script>
+    var num = 15
+
+    const obj = {
+        num : 8,
+        func: function() {
+            console.log(this)
+            console.log("Number 1", this.num, "Number 2", num)
+        }
+    }
+
+    obj.func() // this gives 8 and 15
+    obj.func.call() // this gives 15 and 15
+</script>

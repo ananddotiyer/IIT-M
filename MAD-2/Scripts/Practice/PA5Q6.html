@@ -1,0 +1,22 @@
+<script>
+    function foo(x) {
+        const pr = new Promise((resolve, reject) => {
+            if (x) {
+                resolve(2)
+            } else {
+                reject(3)
+            }
+        })
+        return pr
+    }
+
+    //p and q represent the callback functions resolve and reject.
+    foo(false).then(
+        (p) => {
+            console.log(p)
+        },
+        (q) => {
+            console.log(q)
+        }
+    )
+</script>

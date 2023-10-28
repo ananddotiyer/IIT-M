@@ -1,0 +1,12 @@
+<script>
+    let a = {'a': 1, 'b': 2, 'c': function() {return "Hello"}}
+    let c = {__proto__: a, 'd': 3}
+    console.log(Object.keys(c)) //only 'd'.  no access the properties of a
+
+    // if you want to access all properties of a, do this
+    for (let key in c) {
+        console.log(key)
+    }
+
+    //absurd
+</script>

@@ -1,0 +1,15 @@
+<script>
+    async function abc() {
+        console.log("A")
+        await new Promise(res => {
+            setTimeout(t => console.log("B"), 3000)
+            console.log("B2")
+            res("C")
+        }).then(d => console.log(d)) // res("C")
+        console.log("D")
+        return "E";
+    }
+
+    abc().then(d => console.log(d))
+    console.log("F")    
+</script>

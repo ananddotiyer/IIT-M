@@ -1,0 +1,33 @@
+<script>
+class Person {
+    constructor(first_name, last_name) {
+        this.first_name = first_name
+        this.last_name = last_name
+    }
+}
+
+class Professor extends Person {
+    constructor(first_name, last_name, course_teaching) {
+        super(first_name, last_name)
+        this.course_teaching = course_teaching
+    }
+}
+
+class Student extends Person {
+    constructor(first_name, last_name, roll_number) {
+        super(first_name, last_name)
+        this.roll_number = roll_number
+    }
+}
+
+let prof = new Professor('mohan', 'bhargav', 'history')
+let stud = new Student('raj', 'sharma', 'hs19m010')
+
+// console.log(prof.__proto__)
+// console.log(prof.constructor.name)
+
+prof.__proto__.__proto__.fullname = function() {
+    return `${this.first_name} ${this.last_name}`
+}
+console.log(stud.fullname())
+</script>

@@ -1,0 +1,24 @@
+<script>
+    //Code has been modified from the original to demonstrate "then" and "catch"
+    async function test() {
+        let a = await new Promise(r => r(2 && 4)).catch(e => e);
+        let b = await new Promise((res, rej) => {
+            if (a <= 2) 
+                res (a && 5);
+            else 
+                rej (5 && a);
+        })
+        // .then(
+        //     (p) => {
+        //         console.log("Resolved", p)
+        //     },
+        //     (q) => {
+        //         console.log("Rejected: ", q)
+        //         throw Error("Error raised!");
+        //     }
+        // )
+        .catch(e => e)
+        console.log(a, b)
+    }
+    test();
+</script>

@@ -1,0 +1,21 @@
+<script>
+    const p = function(t) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(t)
+            }, t * 1000)
+        })
+    }
+
+    var data = []
+    asyncFunc = async function() {
+        p1 = await p(1)
+        p2 = await p(2)
+        data.push(p2)
+        data.push(p1)
+        // console.log(data)
+    }
+    asyncFunc()
+    data.push('Outer')
+    console.log(data)
+</script>

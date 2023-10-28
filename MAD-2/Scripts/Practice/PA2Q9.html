@@ -1,0 +1,14 @@
+<script>
+    const obj = {
+        a: 10,
+        operation(x, y, n) {
+            return x ** n + y + this.a
+        }
+    }
+    const arr = Array()
+    p = obj.operation
+    console.log(p(2,3,2)) //NaN, because "this" is not defined
+    console.log(obj.operation(2,3,2)) //17
+    console.log(p.bind(obj, 2)(3,2)) //17
+    console.log(p.call(obj, 2, 3,2)) //17
+</script>

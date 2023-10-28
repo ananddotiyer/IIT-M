@@ -1,0 +1,13 @@
+<script>
+    const a = fetch("122.js")
+    a.then(r => {
+        if (!r.ok) {
+            throw new Error("HTTP Status code: " + r.status)
+        }
+        return r.text()
+    }).then(d => {
+        console.log("Got the data!!", d);
+    }).catch(e => {
+        console.log(e)
+    })
+</script>

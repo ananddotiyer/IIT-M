@@ -1,0 +1,13 @@
+<script>
+    function quiz() {
+        a = 10  // Global
+        var b = 20 //Function scope.
+        console.log(b)
+        let c = 20 //Block scope
+        console.log(c)
+    }
+    quiz()
+    console.log(a) //prints 10
+    console.log(b) //ReferenceError
+    console.log(c)  //ReferenceError
+</script>
