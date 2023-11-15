@@ -18,10 +18,12 @@ public class Upcasting_downcasting {
         
         Test_A a2 = new Test_A();
         Test_B b2 = new Test_B();
-        if (a2 instanceof Test_B)
+        if (a2 instanceof Test_B) {
             //downcasting works only if the
             //object is an instance of subclass.
             b2 = (Test_B)a2;
+            System.out.println("a2 is instance of Test_B");
+        }
         b2.f(); //Test_B::f
     }
 }

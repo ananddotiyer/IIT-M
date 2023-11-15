@@ -25,7 +25,7 @@ public class AQ3_4 {
         AQ3_4_Show obj1 = new AQ3_4_Show(arr1);
         AQ3_4_Show obj2 = new AQ3_4_Show(arr2);
         AQ3_4_Show obj3 = new AQ3_4_Show(arr1, arr2);
-        // AQ3_4_Show obj5=new AQ3_4_Show(arr3);
-        // AQ3_4_Show obj6=new AQ3_4_Show(arr3, arr4);
+        // AQ3_4_Show obj5=new AQ3_4_Show(arr3); //int is not a class
+        // AQ3_4_Show obj6=new AQ3_4_Show(arr3, arr4); //char is not a class.
     }
 }

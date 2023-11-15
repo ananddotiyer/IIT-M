@@ -1,33 +1,33 @@
-class Employee {
+class Demo00_Employee {
     Object x;
-    public Employee() {
+    public Demo00_Employee() {
         this.x = 2;
     }
 }
-class Employee_Generic<T> {
+class Demo00_Employee_Generic<T> {
     T x;
-    public Employee_Generic(T x) {
+    public Demo00_Employee_Generic(T x) {
         this.x = x;
     }
 }
-class Manager extends Employee {
-    public Manager() {
+class Demo00_Manager extends Demo00_Employee {
+    public Demo00_Manager() {
 
     }
 }
 public class Demo00 {
     public static void main(String[] args) {
-        Object mgr = new Manager();    
-        Employee emp = new Manager();
+        Object mgr = new Demo00_Manager();    
+        Demo00_Employee emp = new Demo00_Manager();
         System.out.println(emp.x);
         
         int x = (int)emp.x;
         System.out.println("Value of x in a normal Employee class is:" + x);
 
-        Employee_Generic<Integer> emp1 = new Employee_Generic<Integer>(12);
+        Demo00_Employee_Generic<Integer> emp1 = new Demo00_Employee_Generic<Integer>(12);
         System.out.println("Value of x in a generic Employee class is: " + emp1.x);
 
-        Employee_Generic<String> emp2 = new Employee_Generic<String>("Generic");
+        Demo00_Employee_Generic<String> emp2 = new Demo00_Employee_Generic<String>("Generic");
         System.out.println("Value of x in a generic Employee class is: " + emp2.x);
 
     }

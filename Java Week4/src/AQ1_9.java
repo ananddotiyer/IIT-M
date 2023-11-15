@@ -1,20 +1,20 @@
-abstract class Ipl{
+abstract class AQ1_9_Ipl{
       public abstract void team(String name);
 }
-class CSK extends Ipl{
+class AQ1_9_CSK extends AQ1_9_Ipl{
       public void team(String name) {
             System.out.println(name+" is CSK team");
      }        
 }
-class SRH extends Ipl{
+class AQ1_9_SRH extends AQ1_9_Ipl{
       public void team(String name) {
             System.out.println(name+" is SRH team");
       }        
 }
-class Player{
-      Ipl ipl;
+class AQ1_9_Player{
+      AQ1_9_Ipl ipl;
       String name;
-      public Player(Ipl ipl,String name) {
+      public AQ1_9_Player(AQ1_9_Ipl ipl,String name) {
             this.ipl = ipl;
             this.name = name;
       }
@@ -24,9 +24,9 @@ class Player{
 }
 public class AQ1_9 {
       public static void main(String[] args) {
-            Player player1=new Player(new CSK(), "Ravi Jadeja");
+            AQ1_9_Player player1=new AQ1_9_Player(new AQ1_9_CSK(), "Ravi Jadeja");
             player1.team(); 
-            Player player2=new Player(new SRH(), "Manish Pandey");
+            AQ1_9_Player player2=new AQ1_9_Player(new AQ1_9_SRH(), "Manish Pandey");
             player2.team();
       }
 }

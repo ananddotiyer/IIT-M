@@ -14,7 +14,7 @@ public class PA2 {
        public static void main(String[] args){
             PA2_Example<Number> n=new PA2_Example<Number>(100);
             PA2_Example<Double> e=new PA2_Example<Double>(10.5);
-            n=e; // Using wildcard when declaring n (PA2_Example<? extends Number> n) will fix the issue.
+            n=e; // Using wildcard when declaring n (PA2_Example<?> n) will fix the issue.
             System.out.print(n.show()+"\n"+n.get());
        }
 }

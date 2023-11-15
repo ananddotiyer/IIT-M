@@ -5,22 +5,20 @@ class GPA3_Employee
     String eid;
     String ename;
     String eprojects[];
-    //Define all the required methods here
     public GPA3_Employee(String id, String name, String[] project) {
         eid = id;
         ename = name;
         eprojects = project;
     }
+    //Copy constructor
     public GPA3_Employee(GPA3_Employee emp) {
         eid = emp.eid;
         ename = emp.ename;
         eprojects = new String[emp.eprojects.length];
-        // System.out.println(eprojects.length);
         
         for (int i = 0; i < emp.eprojects.length; i++) {
             eprojects[i] = emp.eprojects[i];    
         }
-        // eprojects = emp.eprojects;
     }
     public void display() {
         System.out.println("id:" + eid);
@@ -42,18 +40,15 @@ public class GPA3
     public static void main(String[] args) 
     {
         Scanner s = new Scanner(System.in);
-    	   String project[] = {"P001","P002","P003"};
-        //Enter the id of employee
+    	String project[] = {"P001","P002","P003"};
         String id = s.nextLine();
-        //Enter the name of employee
         String name = s.nextLine();
         
         GPA3_Employee e1 = new GPA3_Employee(id,name,project);
-        GPA3_Employee e2 = new GPA3_Employee(e1); 
-        //The copy constructor must copy all the data members. 
+        GPA3_Employee e2 = new GPA3_Employee(e1); //Using copy constructor
        
-        e1.mutator();
-        
-        e2.display();
+        e1.mutator(); //Mutating the e1's first project.
+        e1.display();
+        e2.display(); //but, that doesn't affect e2 since e2's eprojects is a copy of e1.
     }
 }

@@ -2,8 +2,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-class PrimitiveMan{
-        public PrimitiveMan() {
+class AQ4_4_PrimitiveMan{
+        public AQ4_4_PrimitiveMan() {
         }
         public void eat(){
         System.out.println("Eating");
@@ -13,8 +13,8 @@ class PrimitiveMan{
             return 0;
         }
 }
-class Human extends PrimitiveMan{
-    public Human() {
+class AQ4_4_Human extends AQ4_4_PrimitiveMan{
+    public AQ4_4_Human() {
     }
     public void appearance(){
             System.out.println("Good-looking");
@@ -22,7 +22,7 @@ class Human extends PrimitiveMan{
 } 
 public class AQ4_4 {
     public static void main(String[] args) {
-            Class c=new GA10_Human().getClass();
+            Class c=new AQ4_4_Human().getClass();
             Constructor[] constructors=c.getConstructors();
             Method[] methods=c.getMethods();
             Field[] fields=c.getFields();

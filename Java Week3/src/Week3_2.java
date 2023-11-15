@@ -17,6 +17,6 @@ class B_3_2 extends A_3_2 {
 public class Week3_2 {
     public static void main(String[] args) {
         A_3_2 a = new B_3_2();    
-        System.out.println(a.bonus(10));
+        System.out.println(a.bonus(10)); //bonus() defined in B_3_2 accepts only float, so this will call bonus() defined in A_3_2.
     }
 }

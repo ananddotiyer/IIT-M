@@ -1,4 +1,7 @@
 class sub {
+    sub() {
+        System.out.println("no arg sub constructor");
+    }
     sub(int sub) {
         System.out.println("sub constructor");
     }

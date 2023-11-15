@@ -13,8 +13,9 @@ class Duck extends Bird {
 public class GA4 {
     public static void doIt(Bird b) {
         b.fly();
-        if (b instanceof Duck)
+        if (b instanceof Duck) {
             ((Duck) b).swim();
+        }
     }
 
     public static void main(String[] args) {

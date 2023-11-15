@@ -1,6 +1,6 @@
 public class GA14 {
     public static void main(String args[]) {
-        switch (2) {
+        switch (2) { //works same as x = 2, followed by switch(x)
             case 1:
                 System.out.println("One");
             case 2:

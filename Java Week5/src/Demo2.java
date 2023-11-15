@@ -2,24 +2,24 @@
 
 import java.util.*;
 
-class Pair<T extends Number> {
+class Demo2_Pair<T extends Number> {
     T key;
     T value;
 
-    public Pair(T key, T value) {
+    public Demo2_Pair(T key, T value) {
         this.key = key;
         this.value = value;
     }
 
-    public void addPair(Pair<?> p) {
+    public void addPair(Demo2_Pair<?> p) {
         System.out.printf("(%f, %f)", p.key.doubleValue() + key.doubleValue(), p.value.doubleValue() + value.doubleValue());
     }
 }
 
-class Main {
+public class Demo2 {
     public static void main(String[] args) {
-        Pair<Integer> p1 = new Pair<Integer>(12, 14);
-        Pair<Double> p2 = new Pair<Double>(20.2, 14.3);
+        Demo2_Pair<Integer> p1 = new Demo2_Pair<Integer>(12, 14);
+        Demo2_Pair<Double> p2 = new Demo2_Pair<Double>(20.2, 14.3);
         p1.addPair(p2);
     }
 }

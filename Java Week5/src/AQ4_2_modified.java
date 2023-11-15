@@ -15,7 +15,7 @@ public class AQ4_2_modified {
         AQ4_2_modified_Computer computer1 = new AQ4_2_modified_Computer(); //class computer
         System.out.println(computer1.getClass());
         
-        AQ4_2_modified_Computer computer2 = new AQ4_2_modified_Laptop();
+        AQ4_2_modified_Computer computer2 = new AQ4_2_modified_Laptop(); //class laptop
         System.out.println(computer2.getClass());
         
         AQ4_2_modified_Laptop laptop1 = (AQ4_2_modified_Laptop) computer2; //class laptop

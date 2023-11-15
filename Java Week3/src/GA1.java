@@ -12,7 +12,7 @@ public class GA1 extends GA1_A {
 
     public static void main(String[] args) {
         GA1_A a = new GA1();
-        //a.display("Ram");
+        // a.display("Ram");
         ((GA1)a).display("Ram");
     }
 }

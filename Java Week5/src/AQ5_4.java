@@ -13,6 +13,6 @@ class AQ5_4_Example<T1,T2 extends Number>{
 class AQ5_4{
     public static void main(String[] args){
         AQ5_4_Example<Number,Number> n = new AQ5_4_Example<Number,Number>();
-        // n.push(5.5); //Ambigous
+        n.push(5.5); //Ambigous
     }
 }
